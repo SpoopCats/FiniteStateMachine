@@ -1,14 +1,19 @@
 extends Node
 
+@export var initial_state: State
 var current_state: State
 var states: Dictionary = {}
 
 func _ready():
 	for child in get_children():
 		if child is State:
-			states[child.name] = child
+			states[child.name.to_lower()] = child
 			# any time we register a new state, we connect the Transitioned signal
 			child.Transitioned.connect(on_child_transition)
+	# set our exported variable initial state to the current state
+	if initial_state:
+		initial_state.Enter()
+		current_state = initial_state
 
 
 func _process(delta):
