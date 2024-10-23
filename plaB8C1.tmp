@@ -11,7 +11,7 @@ size = Vector2(40, 40)
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(960, 1020)
 script = ExtResource("1_nh03w")
-move_speed = 1250
+move_speed = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(20, 20)
@@ -24,7 +24,7 @@ pivot_offset = Vector2(20, 0)
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("2_rdpiu")
-initial_state = NodePath("WaitBottom")
+initial_state = NodePath("MoveUp")
 
 [node name="WaitBottom" type="Node" parent="StateMachine"]
 script = ExtResource("3_bmapk")
