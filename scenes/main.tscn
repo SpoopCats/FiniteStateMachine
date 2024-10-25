@@ -6,10 +6,10 @@
 [node name="Main" type="Node2D"]
 
 [node name="TopPedestal" parent="." instance=ExtResource("1_ci7hf")]
-position = Vector2(320, 20)
+position = Vector2(320, 8)
 
 [node name="BtmPedestal" parent="." instance=ExtResource("1_ci7hf")]
-position = Vector2(320, 340)
+position = Vector2(320, 352)
 
 [node name="Player" parent="." instance=ExtResource("2_t7qp4")]
-position = Vector2(320, 300)
+position = Vector2(320, 336)

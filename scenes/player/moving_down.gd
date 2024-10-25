@@ -3,7 +3,7 @@ class_name MovingDown
 
 @onready var player: CharacterBody2D = $"../.."
 var dir: Vector2 = Vector2.DOWN
-var speed: int = 1400
+var speed: int = 470
 var player_velocity = dir * speed
 var collision_info: KinematicCollision2D
 
