@@ -7,17 +7,6 @@ var speed: int = 1400
 var player_velocity = dir * speed
 var collision_info: KinematicCollision2D
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-func _physics_process(delta: float) -> void:
-	pass
 
 func enter():
 	print("State = MovingDown")
@@ -31,8 +20,6 @@ func Update(delta: float):
 			print(collision_info.get_collider().get('name'))
 			Transitioned.emit(self, "waitbtm")
 
-func Physics_Update(delta: float):
-	pass
 
 func exit():
 	pass
