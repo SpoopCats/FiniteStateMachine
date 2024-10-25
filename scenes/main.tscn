@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxe0xsbvpilv0"]
+
+[ext_resource type="PackedScene" uid="uid://dlebo6pg020d3" path="res://scenes/pedestal.tscn" id="1_ci7hf"]
+[ext_resource type="PackedScene" uid="uid://cy5udr3a1n467" path="res://scenes/player/player.tscn" id="2_t7qp4"]
+
+[node name="Main" type="Node2D"]
+
+[node name="TopPedestal" parent="." instance=ExtResource("1_ci7hf")]
+position = Vector2(960, 20)
+
+[node name="BtmPedestal" parent="." instance=ExtResource("1_ci7hf")]
+position = Vector2(960, 1060)
+
+[node name="Player" parent="." instance=ExtResource("2_t7qp4")]
+position = Vector2(960, 1020)

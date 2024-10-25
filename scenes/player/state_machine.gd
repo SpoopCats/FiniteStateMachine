@@ -37,8 +37,8 @@ func on_child_transition(state, new_state_name):
 		return
 	# if the current state does exist, we will call exit()
 	if current_state:
-		current_state.Exit()
+		current_state.exit()
 	# call the enter function on the new state
-	new_state.Enter()
+	new_state.enter()
 	# set the current state to the new state
 	current_state = new_state
