@@ -8,7 +8,7 @@ var player_velocity = dir * speed
 var collision_info: KinematicCollision2D
 
 
-func enter():
+func Enter():
 	print("State = MovingDown")
 	pass
 
@@ -25,5 +25,5 @@ func Physics_Update(delta: float):
 			Transitioned.emit(self, "waitbtm")
 
 
-func exit():
+func Exit():
 	pass

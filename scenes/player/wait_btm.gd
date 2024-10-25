@@ -2,7 +2,7 @@ extends State
 class_name WaitBtm
 
 
-func enter():
+func Enter():
 	print("State = WaitBtm")
 	pass
 
@@ -15,5 +15,5 @@ func Physics_Update(delta: float):
 	pass
 
 
-func exit():
+func Exit():
 	pass
