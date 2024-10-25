@@ -2,13 +2,16 @@ extends State
 class_name WaitBtm
 
 
-func _process(delta: float) -> void:
+func enter():
+	print("State = WaitBtm")
+	pass
+
+
+func Update(delta: float):
 	if Input.is_action_just_pressed('ui_accept'):
 		Transitioned.emit(self, "movingup")
 
-
-func enter():
-	print("State = WaitBtm")
+func Physics_Update(delta: float):
 	pass
 
 

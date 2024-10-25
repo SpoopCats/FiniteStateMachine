@@ -14,6 +14,10 @@ func enter():
 
 
 func Update(delta: float):
+	pass
+
+
+func Physics_Update(delta: float):
 	collision_info = player.move_and_collide(player_velocity * delta)
 	if collision_info:
 		if collision_info.get_collider().get('name') == 'BtmPedestal':
