@@ -10,6 +10,7 @@ var speed: int = 470
 var player_velocity = dir * speed
 var collision_info: KinematicCollision2D
 
+
 func Enter():
 	print("State = MovingUp")
 	pass
@@ -17,6 +18,7 @@ func Enter():
 
 func Update(delta: float):
 	pass
+
 
 func Physics_Update(delta: float):
 	collision_info = player.move_and_collide(player_velocity * delta)
