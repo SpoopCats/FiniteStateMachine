@@ -11,7 +11,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_qoavk"]
 radius = 8.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_pdcg6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
