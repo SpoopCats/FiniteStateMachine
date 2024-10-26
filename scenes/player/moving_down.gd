@@ -1,7 +1,6 @@
 extends State
 class_name MovingDown
 
-signal score_signal
 
 @onready var player: CharacterBody2D = $"../.."
 # provides a reference to enemy root node
@@ -37,5 +36,5 @@ func Physics_Update(delta: float):
 
 
 func Exit():
-	score_signal.emit()
+	GameEvents.emit_increase_score()
 	pass
