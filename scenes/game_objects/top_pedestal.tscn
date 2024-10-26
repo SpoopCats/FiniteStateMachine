@@ -3,7 +3,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1we11"]
 size = Vector2(16, 16)
 
-[node name="Pedestal" type="StaticBody2D"]
+[node name="TopPedestal" type="StaticBody2D" groups=["top_pedestal"]]
 scale = Vector2(3, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

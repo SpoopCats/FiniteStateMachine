@@ -28,6 +28,8 @@ window/stretch/mode="viewport"
 
 enemy=""
 player=""
+top_pedestal=""
+btm_pedestal=""
 
 [rendering]
 

@@ -11,16 +11,16 @@
 [node name="TopPedestal" parent="." instance=ExtResource("1_ci7hf")]
 position = Vector2(320, 8)
 
-[node name="BtmPedestal" parent="." instance=ExtResource("2_1in7w")]
+[node name="BtmPedestal" parent="." groups=["pedestal"] instance=ExtResource("2_1in7w")]
 position = Vector2(320, 352)
 
 [node name="Player" parent="." instance=ExtResource("2_t7qp4")]
 position = Vector2(320, 336)
 
 [node name="Enemy" parent="." instance=ExtResource("3_qaxp5")]
-position = Vector2(510, 205)
+position = Vector2(484, 175)
 
 [node name="Enemy2" parent="." instance=ExtResource("3_qaxp5")]
-position = Vector2(516, 113)
+position = Vector2(482, 93)
 
 [node name="ScoreCounter" parent="." instance=ExtResource("4_whcrg")]
