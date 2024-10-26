@@ -1,6 +1,8 @@
 extends State
 class_name MovingDown
 
+signal score_signal
+
 @onready var player: CharacterBody2D = $"../.."
 # provides a reference to enemy root node
 @onready var ememies = get_tree().get_first_node_in_group("enemy") as CharacterBody2D
@@ -35,4 +37,5 @@ func Physics_Update(delta: float):
 
 
 func Exit():
+	score_signal.emit()
 	pass
