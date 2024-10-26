@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://cy5udr3a1n467"]
 
-[ext_resource type="Script" path="res://scenes/player/player.gd" id="1_pdcg6"]
-[ext_resource type="Script" path="res://scenes/player/state_machine.gd" id="2_alk6w"]
-[ext_resource type="Texture2D" uid="uid://dr106m3kge3he" path="res://scenes/player/ralph.png" id="2_btrcy"]
-[ext_resource type="Script" path="res://scenes/player/wait_btm.gd" id="3_87pjr"]
-[ext_resource type="Script" path="res://scenes/player/moving_up.gd" id="4_s5y56"]
-[ext_resource type="Script" path="res://scenes/player/wait_top.gd" id="5_bosfj"]
-[ext_resource type="Script" path="res://scenes/player/moving_down.gd" id="6_att2s"]
+[ext_resource type="Script" path="res://scenes/game_objects/player/player.gd" id="1_pdcg6"]
+[ext_resource type="Script" path="res://scenes/game_objects/player/state_machine.gd" id="2_alk6w"]
+[ext_resource type="Texture2D" uid="uid://dr106m3kge3he" path="res://scenes/game_objects/player/ralph.png" id="2_btrcy"]
+[ext_resource type="Script" path="res://scenes/game_objects/player/wait_btm.gd" id="3_87pjr"]
+[ext_resource type="Script" path="res://scenes/game_objects/player/moving_up.gd" id="4_s5y56"]
+[ext_resource type="Script" path="res://scenes/game_objects/player/wait_top.gd" id="5_bosfj"]
+[ext_resource type="Script" path="res://scenes/game_objects/player/moving_down.gd" id="6_att2s"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qoavk"]
 radius = 8.0

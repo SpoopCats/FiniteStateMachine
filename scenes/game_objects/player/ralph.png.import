@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dr106m3kge3he"
-path="res://.godot/imported/ralph.png-1bcfed013758dcddccfb5c79c0184e05.ctex"
+path="res://.godot/imported/ralph.png-d42802f0ff928016ea8a8f78a25327bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/player/ralph.png"
-dest_files=["res://.godot/imported/ralph.png-1bcfed013758dcddccfb5c79c0184e05.ctex"]
+source_file="res://scenes/game_objects/player/ralph.png"
+dest_files=["res://.godot/imported/ralph.png-d42802f0ff928016ea8a8f78a25327bb.ctex"]
 
 [params]
 

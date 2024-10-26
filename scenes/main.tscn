@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://bxe0xsbvpilv0"]
 
-[ext_resource type="PackedScene" uid="uid://dlebo6pg020d3" path="res://scenes/pedestal.tscn" id="1_ci7hf"]
-[ext_resource type="PackedScene" uid="uid://cy5udr3a1n467" path="res://scenes/player/player.tscn" id="2_t7qp4"]
-[ext_resource type="PackedScene" uid="uid://cl5cnqewu3v31" path="res://scenes/enemy/enemy.tscn" id="3_qaxp5"]
+[ext_resource type="PackedScene" uid="uid://dlebo6pg020d3" path="res://scenes/game_objects/pedestal.tscn" id="1_ci7hf"]
+[ext_resource type="PackedScene" uid="uid://cy5udr3a1n467" path="res://scenes/game_objects/player/player.tscn" id="2_t7qp4"]
+[ext_resource type="PackedScene" uid="uid://cl5cnqewu3v31" path="res://scenes/game_objects/enemy/enemy.tscn" id="3_qaxp5"]
 [ext_resource type="PackedScene" uid="uid://cyfii8hf534ly" path="res://scenes/UI/score_counter.tscn" id="4_whcrg"]
 
 [node name="Main" type="Node2D"]
