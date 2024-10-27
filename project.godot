@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.3", "Forward Plus")
 [autoload]
 
 GameEvents="*res://scenes/autoload/game_events.tscn"
+EnemyManager="*res://scenes/autoload/enemy_manager.tscn"
 
 [display]
 

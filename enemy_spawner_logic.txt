@@ -101,5 +101,9 @@ spawner lanes possibly if their lane never gets put back in the array!)
 === === ===
 
 HOW ARE CATS INSTANTIATED?
-
 WHAT IS THE OVERALL FLOW OF THE SPAWNER FROM START TO FINISH?
+
+My current thining is an Enemy_Manager.tscn could handle everything.
+It can take an array of PackedScenes that have all the enemys in the game?
+Here is documentation on exporting array variables:
+https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_exports.html#exporting-arrays
