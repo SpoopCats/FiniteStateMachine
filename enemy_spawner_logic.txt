@@ -60,3 +60,46 @@ RIGHT SIDE SPAWN POINTS
 1936, 244
 1936, 276
 1936, 308
+
+Each spawn point essentially has a 'twin' on the opposite side. If I only want
+one cat in the lane at once, it's twin has to be removed at the same time.
+
+=== === === 
+
+LANE PICKING
+
+- Can pick from an array (or similar data struc), remove that spawn point 
+(and possibly it's left or right side twin) from the array.
+- let the animations etc. play out.
+- queue free the cat in the lane
+- add lane (and twin) back into possible selection pool
+
+=== === ===
+
+DIFFICULTY LEVERS
+
+What increases difficulty?
+
+"When the spawner is more sophistocated, the game gets harder"
+
+1. Time-between-spawns: timer that will determine when the next spawn occurs
+2. >1 cat per lane: as difficulty increases, could include more than 1 cat per lane
+3. Speed of cats: could increase the longer the player survives
+4. Cats of varying speed: harder to judge when to go when obj move dif speed
+4. Size of cats: larger would be harder to dodge
+
+What decreases difficulty?
+"When the player gets more sophistocated, the game gets a repreive in difficulty"
+
+1. Ralph speed up
+2. Ralph can take hits
+3. Ralph can hit the cats and make them disappear for points
+4. Ralph clears the screen of cats (watch out for this, because it will stop your
+spawner lanes possibly if their lane never gets put back in the array!)
+* these all boil down to speed up for Ralph or a powerup
+
+=== === ===
+
+HOW ARE CATS INSTANTIATED?
+
+WHAT IS THE OVERALL FLOW OF THE SPAWNER FROM START TO FINISH?
