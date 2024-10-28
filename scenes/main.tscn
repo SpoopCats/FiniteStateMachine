@@ -1,12 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bxe0xsbvpilv0"]
+[gd_scene load_steps=5 format=3 uid="uid://bxe0xsbvpilv0"]
 
 [ext_resource type="PackedScene" uid="uid://dlebo6pg020d3" path="res://scenes/game_objects/top_pedestal.tscn" id="1_ci7hf"]
 [ext_resource type="PackedScene" uid="uid://oyajyei4imki" path="res://scenes/game_objects/btm_pedestal.tscn" id="2_1in7w"]
 [ext_resource type="PackedScene" uid="uid://cy5udr3a1n467" path="res://scenes/game_objects/player/player.tscn" id="2_t7qp4"]
-[ext_resource type="PackedScene" uid="uid://cl5cnqewu3v31" path="res://scenes/game_objects/enemy/enemy.tscn" id="3_qaxp5"]
 [ext_resource type="PackedScene" uid="uid://cyfii8hf534ly" path="res://scenes/UI/score_counter.tscn" id="4_whcrg"]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" groups=["game"]]
 
 [node name="TopPedestal" parent="." instance=ExtResource("1_ci7hf")]
 position = Vector2(320, 8)
@@ -16,14 +15,5 @@ position = Vector2(320, 352)
 
 [node name="Player" parent="." instance=ExtResource("2_t7qp4")]
 position = Vector2(320, 336)
-
-[node name="Enemy" parent="." instance=ExtResource("3_qaxp5")]
-position = Vector2(508, 172)
-
-[node name="Enemy2" parent="." instance=ExtResource("3_qaxp5")]
-position = Vector2(515, 112)
-
-[node name="Enemy3" parent="." instance=ExtResource("3_qaxp5")]
-position = Vector2(515, 241)
 
 [node name="ScoreCounter" parent="." instance=ExtResource("4_whcrg")]

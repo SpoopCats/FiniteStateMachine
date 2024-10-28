@@ -6,7 +6,7 @@
 size = Vector2(32, 32)
 
 [node name="Enemy" type="CharacterBody2D" groups=["enemy"]]
-position = Vector2(656, 16)
+position = Vector2(320, 180)
 script = ExtResource("1_kut5w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
