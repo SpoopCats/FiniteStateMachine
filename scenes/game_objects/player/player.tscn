@@ -12,6 +12,7 @@
 radius = 8.0
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
+collision_mask = 3
 script = ExtResource("1_pdcg6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

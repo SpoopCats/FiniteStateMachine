@@ -33,6 +33,11 @@ top_pedestal=""
 btm_pedestal=""
 game=""
 
+[layer_names]
+
+2d_physics/layer_1="player + pedestal"
+2d_physics/layer_2="enemies"
+
 [rendering]
 
 2d/snap/snap_2d_transforms_to_pixel=true

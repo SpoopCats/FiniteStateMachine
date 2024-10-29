@@ -19,13 +19,15 @@ extends Node
 # to tell the enemy_manager that it is off screen + lane should be open again
 signal off_screen
 
+# this could be turned into multiple packed scenes in an array
 @export var enemy_scene: PackedScene
 # timer that on timeout starting spawning sequence of new enemy
 @onready var spawn_timer: Timer = $SpawnTimer
+# reference to the main game scene
 @onready var game = get_tree().get_first_node_in_group('game')
 
 #possible spawn lanes, just two on the right currently.
-var spawn_points = [Vector2(-16, 84), Vector2(-16, 244)]
+var spawn_points = [Vector2(-16, 84), Vector2(-16, 244), Vector2(-16, 180), Vector2(-16, 148)]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -54,5 +56,4 @@ func _on_spawn_timer_timeout():
 	game.add_child(enemy)
 	var enemy_lane = _pick_and_close_lane(spawn_points)
 	enemy.position = enemy_lane
-	print(enemy_lane)
 	
