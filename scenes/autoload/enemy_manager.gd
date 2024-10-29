@@ -23,7 +23,8 @@ extends Node
 # timer that on timeout starting spawning sequence of new enemy
 @onready var spawn_timer: Timer = $SpawnTimer
 # reference to the main game scene
-@onready var game = get_tree().get_first_node_in_group('game')
+@onready var game: Node2D = $".."
+
 
 #possible spawn lanes, just two on the right currently.
 var spawn_points = [Vector2(-16, 84), Vector2(-16, 244), Vector2(-16, 180), Vector2(-16, 148)]
