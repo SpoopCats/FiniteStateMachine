@@ -17,7 +17,6 @@ extends Node
 
 # signal that enemy will emit when it has reached a position threshold
 # to tell the enemy_manager that it is off screen + lane should be open again
-signal off_screen
 
 # this could be turned into multiple packed scenes in an array
 @export var enemy_scene: PackedScene
@@ -31,7 +30,7 @@ var spawn_points = [Vector2(-16, 84), Vector2(-16, 244), Vector2(-16, 180), Vect
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	off_screen.connect(_on_off_screen)
+	GameEvents.off_screen.connect(_on_off_screen)
 	spawn_timer.timeout.connect(_on_spawn_timer_timeout)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -44,8 +43,8 @@ func _on_off_screen(lane_to_open):
 	pass
 
 
-func _pick_and_close_lane(spawn_points):
-	var picked_lane = spawn_points.pick_random()
+func _pick_and_close_lane(spawns: Array):
+	var picked_lane = spawns.pick_random()
 	#close lane here too
 	return picked_lane
 

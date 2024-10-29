@@ -24,6 +24,6 @@ func _is_enemy_on_screen():
 	# 656 is the x position where a 32x32 sprite will be fully off screen on the right
 	# -16 is the x position ... off screen on the left
 	if position.x > 656 or position.x < -16:
-		EnemyManager.off_screen.emit(lane_to_reopen)
+		GameEvents.emit_off_screen(lane_to_reopen)
 		queue_free()
 		
