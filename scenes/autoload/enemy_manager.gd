@@ -50,7 +50,7 @@ func _pick_and_close_lane(spawn_points):
 
 # here is where all the code for enemy instantiation happens
 func _on_spawn_timer_timeout():
-	var enemy = enemy_scene.instantiate() as CharacterBody2D
+	var enemy = enemy_scene.instantiate()
 	game.add_child(enemy)
 	var enemy_lane = _pick_and_close_lane(spawn_points)
 	enemy.position = enemy_lane
