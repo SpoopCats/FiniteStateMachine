@@ -77,6 +77,8 @@ func _on_spawn_timer_timeout():
 	# is closing the lane necessary right now? maybe if powerups get added to the game?
 	var enemy_lane = _pick_and_close_lane(spawn_points)
 	enemy.position = enemy_lane
+	# randomize enemy speed a bit
+	enemy.speed = randi_range(80,120)
 	# make enemies spawning on right side of screen go left
 	if enemy.position.x > 640:
 		enemy.dir = Vector2.LEFT
