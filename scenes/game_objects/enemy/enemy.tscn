@@ -10,7 +10,6 @@ position = Vector2(-16, -16)
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("1_kut5w")
-lane_to_reopen = null
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -16.0

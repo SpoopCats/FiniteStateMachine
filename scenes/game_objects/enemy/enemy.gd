@@ -1,12 +1,11 @@
 extends CharacterBody2D
 
-var dir = Vector2.RIGHT
-var speed = 100
+@export var dir = Vector2.RIGHT
+@export var speed = 100
 @export var lane_to_reopen: Vector2
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	position = Vector2(0, 100)
 	velocity = dir * speed
 	pass # Replace with function body.
 
