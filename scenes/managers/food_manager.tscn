@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dusjs4acn2owf"]
+
+[ext_resource type="Script" path="res://scenes/managers/food_manager.gd" id="1_gv0yv"]
+[ext_resource type="PackedScene" uid="uid://brea3ejwmo2bu" path="res://scenes/game_objects/food/food.tscn" id="2_xijna"]
+
+[node name="FoodManager" type="Node"]
+script = ExtResource("1_gv0yv")
+food_scene = ExtResource("2_xijna")

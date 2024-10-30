@@ -3,6 +3,8 @@ class_name WaitTop
 
 
 func Enter():
+	# emit signal to instantiate food on btm pedestal
+	GameEvents.emit_spawn_food_btm()
 	print("State = WaitTop")
 	pass
 
