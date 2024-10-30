@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://oyajyei4imki"]
 
-[ext_resource type="PackedScene" uid="uid://dlebo6pg020d3" path="res://scenes/game_objects/top_pedestal.tscn" id="1_ynlf2"]
+[ext_resource type="PackedScene" uid="uid://dlebo6pg020d3" path="res://scenes/game_objects/pedestals/top_pedestal.tscn" id="1_ynlf2"]
 
 [node name="BtmPedestal" groups=["btm_pedestal"] instance=ExtResource("1_ynlf2")]
