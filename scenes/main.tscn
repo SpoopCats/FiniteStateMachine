@@ -13,13 +13,13 @@
 
 [node name="FoodManager" parent="." instance=ExtResource("2_ljjo4")]
 
+[node name="Player" parent="." instance=ExtResource("2_t7qp4")]
+position = Vector2(320, 336)
+
 [node name="TopPedestal" parent="." instance=ExtResource("1_ci7hf")]
 position = Vector2(320, 8)
 
 [node name="BtmPedestal" parent="." instance=ExtResource("2_1in7w")]
 position = Vector2(320, 352)
-
-[node name="Player" parent="." instance=ExtResource("2_t7qp4")]
-position = Vector2(320, 336)
 
 [node name="ScoreCounter" parent="." instance=ExtResource("4_whcrg")]
