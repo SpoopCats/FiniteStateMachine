@@ -31,6 +31,7 @@ player=""
 top_pedestal=""
 btm_pedestal=""
 game=""
+food=""
 
 [layer_names]
 

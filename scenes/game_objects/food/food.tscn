@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://brea3ejwmo2bu"]
 
-[node name="Food" type="Node2D"]
+[node name="Food" type="Node2D" groups=["food"]]
 position = Vector2(656, -16)
 
 [node name="ColorRect" type="ColorRect" parent="."]
