@@ -48,24 +48,24 @@ var spawn_points = [
 	Vector2(656, 308),
 ]
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
 	GameEvents.off_screen.connect(_on_off_screen)
 	spawn_timer.timeout.connect(_on_spawn_timer_timeout)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta: float) -> void:
 	pass
 
 
 func _on_off_screen(lane_to_open):
-	print("_on_off_screen detected by enemy manager: open lane " + str(lane_to_open))
+	#here is where you could reopen lanes if you were closing them
 	pass
 
 
 func _pick_and_close_lane(spawns: Array):
 	var picked_lane = spawns.pick_random()
-	#close lane here too
+	#close lane here too if you want to close lanes
 	return picked_lane
 
 

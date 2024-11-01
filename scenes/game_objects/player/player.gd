@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@export var score_for_eating = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

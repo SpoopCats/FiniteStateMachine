@@ -10,8 +10,8 @@ signal spawn_food_top
 signal spawn_food_btm
 
 # Emits the custom signal for incrementing the score
-func emit_increase_score():
-	increase_score.emit()
+func emit_increase_score(score_amt: int):
+	increase_score.emit(score_amt)
 
 
 func emit_off_screen(lane):

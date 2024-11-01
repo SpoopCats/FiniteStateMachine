@@ -38,5 +38,5 @@ func Physics_Update(delta: float):
 
 
 func Exit():
-	GameEvents.emit_increase_score()
+	GameEvents.emit_increase_score(player.score_for_eating)
 	pass
