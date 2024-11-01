@@ -30,6 +30,10 @@ func Physics_Update(delta: float):
 		# test it to see if its in certain groups
 		if node_collided_with.is_in_group('top_pedestal'):
 			Transitioned.emit(self, "waittop")
+		if node_collided_with.is_in_group('score_bonus'):
+			# increases score by score_bonus' property of score_bonus_amt
+			GameEvents.emit_increase_score(node_collided_with.score_bonus_amt)
+			node_collided_with.queue_free()
 		if node_collided_with.is_in_group('enemy'):
 			#placeholder code for something that happens when Ralph hits enemies
 			print("enemy!")

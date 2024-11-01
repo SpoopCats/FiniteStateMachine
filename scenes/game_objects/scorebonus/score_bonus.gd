@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
 @export var score_bonus_amt = 5
+@export var dir = Vector2.RIGHT
+@export var speed = 100
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

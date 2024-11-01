@@ -5,8 +5,10 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wwjp4"]
 size = Vector2(32, 32)
 
-[node name="ScoreBonus" type="CharacterBody2D"]
+[node name="ScoreBonus" type="CharacterBody2D" groups=["score_bonus"]]
 position = Vector2(-48, -48)
+collision_layer = 4
+collision_mask = 0
 script = ExtResource("1_2egkx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
