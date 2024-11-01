@@ -1,9 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://b53ft8643ldn"]
+[gd_scene load_steps=3 format=3 uid="uid://b53ft8643ldn"]
 
 [ext_resource type="Script" path="res://scenes/managers/score_bonus_manager.gd" id="1_xholi"]
+[ext_resource type="PackedScene" uid="uid://nvoh0pabewa6" path="res://scenes/game_objects/scorebonus/score_bonus.tscn" id="2_drk1b"]
 
 [node name="ScoreBonusManager" type="Node"]
 script = ExtResource("1_xholi")
+score_bonus_scene = ExtResource("2_drk1b")
 
 [node name="BonusTimer" type="Timer" parent="."]
 autostart = true

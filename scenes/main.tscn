@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bxe0xsbvpilv0"]
+[gd_scene load_steps=8 format=3 uid="uid://bxe0xsbvpilv0"]
 
 [ext_resource type="PackedScene" uid="uid://ddy0w3bgh537x" path="res://scenes/managers/enemy_manager.tscn" id="1_087od"]
 [ext_resource type="PackedScene" uid="uid://dlebo6pg020d3" path="res://scenes/game_objects/pedestals/top_pedestal.tscn" id="1_ci7hf"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://cy5udr3a1n467" path="res://scenes/game_objects/player/player.tscn" id="2_t7qp4"]
 [ext_resource type="PackedScene" uid="uid://b53ft8643ldn" path="res://scenes/managers/score_bonus_manager.tscn" id="3_xeayt"]
 [ext_resource type="PackedScene" uid="uid://cyfii8hf534ly" path="res://scenes/UI/score_counter.tscn" id="4_whcrg"]
-[ext_resource type="PackedScene" uid="uid://nvoh0pabewa6" path="res://scenes/game_objects/scorebonus/score_bonus.tscn" id="8_lsh6e"]
 
 [node name="Main" type="Node2D" groups=["game"]]
 
@@ -27,6 +26,3 @@ position = Vector2(320, 8)
 position = Vector2(320, 352)
 
 [node name="ScoreCounter" parent="." instance=ExtResource("4_whcrg")]
-
-[node name="ScoreBonus" parent="." instance=ExtResource("8_lsh6e")]
-position = Vector2(321, 164)

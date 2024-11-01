@@ -1,5 +1,8 @@
 extends Node
 
+@export var score_bonus_scene: PackedScene
+# reference to the main node
+@onready var game: Node2D = $".."
 @onready var bonus_timer: Timer = $BonusTimer
 @export var spawn_chance: int = 50 #50% currently
 
@@ -34,8 +37,13 @@ func roll_for_bonus_spawn():
 	var roll = randi_range(0, 100)
 	# no spawn, exit code
 	if roll < spawn_chance:
-		print('no spawn')
 		return
 	# roll succeeds, spawn in score_bonus.tscn
 	if roll >= spawn_chance: #modify here for changing spawn chances
-		print('spawn')
+		var bonus = score_bonus_scene.instantiate()
+		var bonus_lane = spawn_points.pick_random()
+		bonus.position = bonus_lane
+		# check if it should be moving left instead of right
+		if bonus.position.x > 640:
+			bonus.dir = Vector2.LEFT
+		game.add_child(bonus)
