@@ -1,10 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://nvoh0pabewa6"]
+[gd_scene load_steps=3 format=3 uid="uid://nvoh0pabewa6"]
+
+[ext_resource type="Script" path="res://scenes/game_objects/scorebonus/score_bonus.gd" id="1_2egkx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wwjp4"]
 size = Vector2(32, 32)
 
 [node name="ScoreBonus" type="CharacterBody2D"]
 position = Vector2(-48, -48)
+script = ExtResource("1_2egkx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_wwjp4")
