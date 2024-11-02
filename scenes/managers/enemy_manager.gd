@@ -26,7 +26,8 @@ extends Node
 @onready var game: Node2D = $".."
 
 
-#possible spawn lanes, just two on the right currently.
+# possible spawn lanes, just two on the right currently.
+# this should maybe be a resource since score_bonus_manager uses it too
 var spawn_points = [
 	Vector2(-16, 52),
 	Vector2(-16, 84),

@@ -4,9 +4,10 @@ extends Node
 # reference to the main node
 @onready var game: Node2D = $".."
 @onready var bonus_timer: Timer = $BonusTimer
-@export var spawn_chance: int = 50 #50% currently
+@export var spawn_roll_challenge: int = 85 #must roll 85 or higher on D100
 
 # possible lanes to spawn in, currently the same as enemy spawn points
+# this should maybe be a resource since enemy_manager uses it too
 var spawn_points = [
 	Vector2(-16, 52),
 	Vector2(-16, 84),
@@ -34,12 +35,13 @@ func _ready() -> void:
 
 
 func roll_for_bonus_spawn():
+	# roll D100
 	var roll = randi_range(0, 100)
 	# no spawn, exit code
-	if roll < spawn_chance:
+	if roll < spawn_roll_challenge:
 		return
 	# roll succeeds, spawn in score_bonus.tscn
-	if roll >= spawn_chance: #modify here for changing spawn chances
+	if roll >= spawn_roll_challenge: #modify here for changing spawn chances
 		var bonus = score_bonus_scene.instantiate()
 		var bonus_lane = spawn_points.pick_random()
 		bonus.position = bonus_lane
