@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dusjs4acn2owf" path="res://scenes/managers/food_manager.tscn" id="2_ljjo4"]
 [ext_resource type="PackedScene" uid="uid://cy5udr3a1n467" path="res://scenes/game_objects/player/player.tscn" id="2_t7qp4"]
 [ext_resource type="PackedScene" uid="uid://b53ft8643ldn" path="res://scenes/managers/score_bonus_manager.tscn" id="3_xeayt"]
-[ext_resource type="PackedScene" uid="uid://cyfii8hf534ly" path="res://scenes/UI/score_counter.tscn" id="4_whcrg"]
+[ext_resource type="PackedScene" uid="uid://cyfii8hf534ly" path="res://scenes/UI/score_display/score_counter.tscn" id="4_whcrg"]
 
 [node name="Main" type="Node2D" groups=["game"]]
 

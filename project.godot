@@ -17,12 +17,12 @@ config/features=PackedStringArray("4.3", "Forward Plus")
 [autoload]
 
 GameEvents="*res://scenes/autoload/game_events.tscn"
+ScoreTracker="*res://scenes/autoload/score_tracker.tscn"
 
 [display]
 
 window/size/viewport_width=640
 window/size/viewport_height=360
-window/size/mode=3
 window/stretch/mode="viewport"
 
 [global_group]
