@@ -36,9 +36,7 @@ func Physics_Update(delta: float):
 			node_collided_with.queue_free()
 		if node_collided_with.is_in_group('enemy'):
 			#placeholder code for something that happens when Ralph hits enemies
-			print("enemy!")
-			player.queue_free()
-			node_collided_with.queue_free()
+			get_tree().change_scene_to_file('res://scenes/UI/game_over_menu/game_over_menu.tscn')
 
 
 func Exit():

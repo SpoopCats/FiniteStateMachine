@@ -1,6 +1,7 @@
 extends Control
 
 # neighbours not set for buttons yet
+# probably only need it on Play UP & Quit DOWN so it loops
 # see this tutorial to setup: https://youtu.be/Mx3iyz8AUAE?si=6mYd4O2LqKQbzZlQ&t=165
 
 func _ready() -> void:
