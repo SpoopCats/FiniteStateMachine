@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dndaqxqkijv4l"]
+
+[ext_resource type="AudioStream" uid="uid://coy3sj03u68uq" path="res://sounds/music/ReClaimed.mp3" id="1_urnps"]
+
+[node name="BkgroundMusic" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_urnps")
+volume_db = 5.0
+autoplay = true

@@ -1,9 +1,12 @@
 extends State
 class_name WaitBtm
 
+@onready var btm_sfx: AudioStreamPlayer2D = $"../../BtmSfx"
+
 
 func Enter():
 	# emit signal to instantiate food on top pedestal
+	btm_sfx.play()
 	GameEvents.emit_spawn_food_top()
 	print("State = WaitBtm")
 

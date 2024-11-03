@@ -18,7 +18,8 @@ config/features=PackedStringArray("4.3", "Forward Plus")
 
 GameEvents="*res://scenes/autoload/game_events.tscn"
 ScoreTracker="*res://scenes/autoload/score_tracker.tscn"
-BkgroundMusic="*res://sounds/bkground_music.tscn"
+BkgroundMusic="*res://sounds/music/bkground_music.tscn"
+GameOver="*res://sounds/sfx/game_over.tscn"
 
 [display]
 

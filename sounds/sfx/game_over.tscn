@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bv4hmpiqal3hg"]
+
+[ext_resource type="AudioStream" uid="uid://qyvvqffnu8xk" path="res://sounds/sfx/Game_Over - JDSherbert - Pixel UI SFX Pack - Error 2 (Square).ogg" id="1_72a68"]
+
+[node name="GameOver" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_72a68")
