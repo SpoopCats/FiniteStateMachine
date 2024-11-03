@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dndaqxqkijv4l"]
+
+[ext_resource type="AudioStream" uid="uid://c0qm3jsi2l5w" path="res://sounds/Minigame Monkey.ogg" id="1_m3qik"]
+
+[node name="BkgroundMusic" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_m3qik")
+autoplay = true
