@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/game_objects/player/player.gd" id="1_pdcg6"]
 [ext_resource type="Script" path="res://scenes/game_objects/player/state_machine.gd" id="2_alk6w"]
-[ext_resource type="Texture2D" uid="uid://dr106m3kge3he" path="res://scenes/game_objects/player/ralph.png" id="2_btrcy"]
+[ext_resource type="Texture2D" uid="uid://dyswl6aq5igir" path="res://sprites/ralph.png" id="2_rkqnt"]
 [ext_resource type="Script" path="res://scenes/game_objects/player/wait_btm.gd" id="3_87pjr"]
 [ext_resource type="Script" path="res://scenes/game_objects/player/moving_up.gd" id="4_s5y56"]
 [ext_resource type="Script" path="res://scenes/game_objects/player/wait_top.gd" id="5_bosfj"]
@@ -22,7 +22,7 @@ script = ExtResource("1_pdcg6")
 shape = SubResource("CircleShape2D_qoavk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_btrcy")
+texture = ExtResource("2_rkqnt")
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("2_alk6w")
