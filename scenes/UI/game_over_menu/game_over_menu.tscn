@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://4pbbpdmw12o7"]
+[gd_scene load_steps=4 format=3 uid="uid://4pbbpdmw12o7"]
 
 [ext_resource type="Script" path="res://scenes/UI/game_over_menu/game_over_menu.gd" id="1_d3v8l"]
+[ext_resource type="FontFile" uid="uid://420mvaqtu2k0" path="res://pixel_font.ttf" id="2_bfcaa"]
 [ext_resource type="Script" path="res://scenes/UI/game_over_menu/score_label.gd" id="2_fauem"]
 
 [node name="GameOverMenu" type="Control"]
@@ -37,10 +38,12 @@ layout_mode = 2
 
 [node name="PlayAgain" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_bfcaa")
 text = "PLAY AGAIN?"
 
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_bfcaa")
 text = "QUIT"
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
@@ -57,6 +60,7 @@ theme_override_constants/margin_top = 100
 [node name="ScoreLabel" type="Label" parent="MarginContainer2"]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_bfcaa")
 text = "Score Displayed"
 script = ExtResource("2_fauem")
 

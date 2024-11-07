@@ -1,9 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://cyfii8hf534ly"]
+[gd_scene load_steps=3 format=3 uid="uid://cyfii8hf534ly"]
 
+[ext_resource type="FontFile" uid="uid://420mvaqtu2k0" path="res://pixel_font.ttf" id="1_ui4kh"]
 [ext_resource type="Script" path="res://scenes/UI/score_display/score_counter.gd" id="1_ul7em"]
 
 [node name="ScoreCounter" type="Label"]
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("1_ui4kh")
 text = "0"
 script = ExtResource("1_ul7em")
