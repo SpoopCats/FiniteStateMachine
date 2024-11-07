@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://k5400ogvvuj6"
-path="res://.godot/imported/donut-2-16x16.png-140eac5c2efabc78c70c564dbbacddfd.ctex"
+uid="uid://5cry2juen66v"
+path="res://.godot/imported/Peanut-Butter-32x32.png-c85eac1667c3670f39385b5661114996.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/donut-2-16x16.png"
-dest_files=["res://.godot/imported/donut-2-16x16.png-140eac5c2efabc78c70c564dbbacddfd.ctex"]
+source_file="res://assets/sprites/Peanut-Butter-32x32.png"
+dest_files=["res://.godot/imported/Peanut-Butter-32x32.png-c85eac1667c3670f39385b5661114996.ctex"]
 
 [params]
 

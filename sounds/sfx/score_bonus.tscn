@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://bt2arus0tm3hp"]
-
-[ext_resource type="AudioStream" uid="uid://boe2oolcd578f" path="res://sounds/sfx/Score_Bonus - HunterAudio 8-Bit - Spring1.ogg" id="1_i6fwh"]
-
-[node name="ScoreBonus" type="AudioStreamPlayer2D"]
-stream = ExtResource("1_i6fwh")

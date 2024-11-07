@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://qyvvqffnu8xk"
+path="res://.godot/imported/Game_Over - JDSherbert - Pixel UI SFX Pack - Error 2 (Square).ogg-f48a1e6498819bb65b338a1021d0d7bc.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sounds/sfx/Game_Over - JDSherbert - Pixel UI SFX Pack - Error 2 (Square).ogg"
+dest_files=["res://.godot/imported/Game_Over - JDSherbert - Pixel UI SFX Pack - Error 2 (Square).ogg-f48a1e6498819bb65b338a1021d0d7bc.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

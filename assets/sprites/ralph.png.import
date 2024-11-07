@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cl16a1yue6yuw"
-path="res://.godot/imported/cat-orange.png-e008f86c708d55314e4f2bf1bae63c08.ctex"
+uid="uid://dyswl6aq5igir"
+path="res://.godot/imported/ralph.png-945b450108a8f0cee1c4bb65cf124ba7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/cats/cat-orange.png"
-dest_files=["res://.godot/imported/cat-orange.png-e008f86c708d55314e4f2bf1bae63c08.ctex"]
+source_file="res://assets/sprites/ralph.png"
+dest_files=["res://.godot/imported/ralph.png-945b450108a8f0cee1c4bb65cf124ba7.ctex"]
 
 [params]
 

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://tg3qapghkufc"]
+
+[ext_resource type="AudioStream" uid="uid://chjkfgft13jdb" path="res://assets/sounds/sfx/Btm - JDSherbert - Pixel UI SFX Pack - Cursor 3 (Sine).ogg" id="1_i6w1c"]
+
+[node name="BtmSfx" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_i6w1c")

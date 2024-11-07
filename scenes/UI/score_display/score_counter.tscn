@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cyfii8hf534ly"]
 
-[ext_resource type="FontFile" uid="uid://420mvaqtu2k0" path="res://pixel_font.ttf" id="1_ui4kh"]
+[ext_resource type="FontFile" uid="uid://420mvaqtu2k0" path="res://fonts/pixel_font.ttf" id="1_ui4kh"]
 [ext_resource type="Script" path="res://scenes/UI/score_display/score_counter.gd" id="1_ul7em"]
 
 [node name="ScoreCounter" type="Label"]

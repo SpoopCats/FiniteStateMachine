@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://nvoh0pabewa6"]
 
 [ext_resource type="Script" path="res://scenes/game_objects/scorebonus/score_bonus.gd" id="1_2egkx"]
-[ext_resource type="Texture2D" uid="uid://5cry2juen66v" path="res://sprites/Peanut-Butter-32x32.png" id="2_ao4qs"]
+[ext_resource type="Texture2D" uid="uid://5cry2juen66v" path="res://assets/sprites/Peanut-Butter-32x32.png" id="2_ao4qs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wwjp4"]
 size = Vector2(28, 32)

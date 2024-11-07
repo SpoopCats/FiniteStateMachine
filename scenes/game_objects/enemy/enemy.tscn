@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://cl5cnqewu3v31"]
 
 [ext_resource type="Script" path="res://scenes/game_objects/enemy/enemy.gd" id="1_kut5w"]
-[ext_resource type="Texture2D" uid="uid://bj6glpdrrmxyp" path="res://sprites/cats/cat-black.png" id="2_1rfl6"]
-[ext_resource type="Texture2D" uid="uid://cvobhtyplhcnd" path="res://sprites/cats/cat-brown.png" id="3_6342n"]
-[ext_resource type="Texture2D" uid="uid://cl16a1yue6yuw" path="res://sprites/cats/cat-orange.png" id="4_ob8dh"]
-[ext_resource type="Texture2D" uid="uid://dv51e8o2li7oh" path="res://sprites/cats/cat-white.png" id="5_amrve"]
+[ext_resource type="Texture2D" uid="uid://bj6glpdrrmxyp" path="res://assets/sprites/cats/cat-black.png" id="2_1rfl6"]
+[ext_resource type="Texture2D" uid="uid://cvobhtyplhcnd" path="res://assets/sprites/cats/cat-brown.png" id="3_6342n"]
+[ext_resource type="Texture2D" uid="uid://cl16a1yue6yuw" path="res://assets/sprites/cats/cat-orange.png" id="4_ob8dh"]
+[ext_resource type="Texture2D" uid="uid://dv51e8o2li7oh" path="res://assets/sprites/cats/cat-white.png" id="5_amrve"]
 
 [node name="Enemy" type="CharacterBody2D" groups=["enemy"]]
 position = Vector2(-16, -16)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c81dp66ru802t"
-path="res://.godot/imported/chicken-drumstick16x16.png-f074ce91c73abc779e32eb152c8d9b86.ctex"
+uid="uid://k5400ogvvuj6"
+path="res://.godot/imported/donut-2-16x16.png-ad4bce19978e4ef0e1f35f0b025a61d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/chicken-drumstick16x16.png"
-dest_files=["res://.godot/imported/chicken-drumstick16x16.png-f074ce91c73abc779e32eb152c8d9b86.ctex"]
+source_file="res://assets/sprites/donut-2-16x16.png"
+dest_files=["res://.godot/imported/donut-2-16x16.png-ad4bce19978e4ef0e1f35f0b025a61d2.ctex"]
 
 [params]
 

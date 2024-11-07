@@ -5,7 +5,7 @@ extends Control
 # see this tutorial to setup: https://youtu.be/Mx3iyz8AUAE?si=6mYd4O2LqKQbzZlQ&t=165
 
 func _ready() -> void:
-	$MarginContainer/VBoxContainer/Play.grab_focus()
+	$MarginContainer/VBoxContainer/MarginContainer/Play.grab_focus()
 
 
 func _on_play_pressed() -> void:
