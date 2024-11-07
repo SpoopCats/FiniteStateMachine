@@ -1,8 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://b4lfsea1krr1s"]
+[gd_scene load_steps=8 format=3 uid="uid://b4lfsea1krr1s"]
 
 [ext_resource type="Theme" uid="uid://d3mnn2vdpemvj" path="res://resources/main_theme.tres" id="1_ehnkx"]
 [ext_resource type="Script" path="res://scenes/UI/start_menu/start_menu.gd" id="1_vbvoa"]
 [ext_resource type="FontFile" uid="uid://420mvaqtu2k0" path="res://fonts/pixel_font.ttf" id="2_1vqnp"]
+[ext_resource type="Texture2D" uid="uid://dyswl6aq5igir" path="res://assets/sprites/ralph.png" id="4_elcnm"]
+[ext_resource type="Texture2D" uid="uid://5cry2juen66v" path="res://assets/sprites/Peanut-Butter-32x32.png" id="4_kyklh"]
+[ext_resource type="Texture2D" uid="uid://bj6glpdrrmxyp" path="res://assets/sprites/cats/cat-black.png" id="6_85mfo"]
+[ext_resource type="Texture2D" uid="uid://dv51e8o2li7oh" path="res://assets/sprites/cats/cat-white.png" id="7_0xmvb"]
 
 [node name="StartMenu" type="Control"]
 layout_mode = 3
@@ -20,72 +24,112 @@ offset_right = 640.0
 offset_bottom = 360.0
 color = Color(0.156863, 0.156863, 0.180392, 1)
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="ButtonContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -41.0
-offset_top = -68.0
-offset_right = 41.0
-offset_bottom = 68.0
+offset_left = -74.0
+offset_top = -40.0
+offset_right = 74.0
+offset_bottom = 156.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ButtonContainer"]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="ButtonContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Play" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer"]
+[node name="Play" type="Button" parent="ButtonContainer/VBoxContainer/MarginContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.968627, 0.894118, 1)
 theme_override_constants/outline_size = 1
 theme_override_fonts/font = ExtResource("2_1vqnp")
 text = "PLAY"
 
-[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+[node name="MarginContainer4" type="MarginContainer" parent="ButtonContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Credits" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer2"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.968627, 0.894118, 1)
-theme_override_constants/outline_size = 1
-theme_override_fonts/font = ExtResource("2_1vqnp")
-text = "CREDITS"
-
-[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_bottom = 5
-
-[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer3"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.968627, 0.894118, 1)
-theme_override_constants/outline_size = 1
-theme_override_fonts/font = ExtResource("2_1vqnp")
-text = "QUIT"
-
-[node name="MarginContainer4" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_bottom = 5
-
-[node name="Settings" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer4"]
+[node name="Settings" type="Button" parent="ButtonContainer/VBoxContainer/MarginContainer4"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.968627, 0.894118, 1)
 theme_override_constants/outline_size = 1
 theme_override_fonts/font = ExtResource("2_1vqnp")
 text = "SETTINGS"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer2/Credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer3/Quit" to="." method="_on_quit_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer4/Settings" to="." method="_on_settings_pressed"]
+[node name="MarginContainer2" type="MarginContainer" parent="ButtonContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Credits" type="Button" parent="ButtonContainer/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.968627, 0.894118, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("2_1vqnp")
+text = "CREDITS"
+
+[node name="MarginContainer3" type="MarginContainer" parent="ButtonContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Quit" type="Button" parent="ButtonContainer/VBoxContainer/MarginContainer3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.968627, 0.894118, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("2_1vqnp")
+text = "QUIT"
+
+[node name="TitleContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -162.0
+offset_top = 33.0
+offset_right = 163.0
+offset_bottom = 86.0
+grow_horizontal = 2
+
+[node name="GameTitle" type="Label" parent="TitleContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "PEANUT BUTTER
+RALPH!"
+horizontal_alignment = 1
+
+[node name="PeanutButter" type="Sprite2D" parent="."]
+position = Vector2(321, 118)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_kyklh")
+metadata/_edit_group_ = true
+
+[node name="Ralph" type="Sprite2D" parent="PeanutButter"]
+position = Vector2(-10, -190)
+scale = Vector2(10, 10)
+texture = ExtResource("4_elcnm")
+
+[node name="Cat" type="Sprite2D" parent="."]
+position = Vector2(107, 280)
+texture = ExtResource("6_85mfo")
+
+[node name="WhiteCat" type="Sprite2D" parent="."]
+position = Vector2(531, 279)
+scale = Vector2(-1, 1)
+texture = ExtResource("7_0xmvb")
+
+[connection signal="pressed" from="ButtonContainer/VBoxContainer/MarginContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="ButtonContainer/VBoxContainer/MarginContainer4/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="ButtonContainer/VBoxContainer/MarginContainer2/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="ButtonContainer/VBoxContainer/MarginContainer3/Quit" to="." method="_on_quit_pressed"]
