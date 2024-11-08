@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://5cry2juen66v"
-path="res://.godot/imported/Peanut-Butter-32x32.png-c85eac1667c3670f39385b5661114996.ctex"
+path="res://.godot/imported/Peanut-Butter-32x32.png-746fe828332e9b1bac3342363cf75633.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Peanut-Butter-32x32.png"
-dest_files=["res://.godot/imported/Peanut-Butter-32x32.png-c85eac1667c3670f39385b5661114996.ctex"]
+source_file="res://assets/sprites/score_bonus/Peanut-Butter-32x32.png"
+dest_files=["res://.godot/imported/Peanut-Butter-32x32.png-746fe828332e9b1bac3342363cf75633.ctex"]
 
 [params]
 

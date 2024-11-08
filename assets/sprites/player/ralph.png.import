@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnc0jh2w5ldgv"
-path="res://.godot/imported/ralph-big.png-979732e73451d06c418fd55929221032.ctex"
+uid="uid://b6puvvienml2u"
+path="res://.godot/imported/ralph.png-5daee51863478458aa1a49bc761b2fb8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/ralph-big.png"
-dest_files=["res://.godot/imported/ralph-big.png-979732e73451d06c418fd55929221032.ctex"]
+source_file="res://assets/sprites/player/ralph.png"
+dest_files=["res://.godot/imported/ralph.png-5daee51863478458aa1a49bc761b2fb8.ctex"]
 
 [params]
 

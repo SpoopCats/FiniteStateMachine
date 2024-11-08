@@ -51,15 +51,15 @@ spawn 1 pixel off screen
 -16, 308
 
 RIGHT SIDE SPAWN POINTS
-1936, 52
-1936, 84
-1936, 116
-1936, 148
-1936, 180
-1936, 212
-1936, 244
-1936, 276
-1936, 308
+656, 52
+656, 84
+656, 116
+656, 148
+656, 180
+656, 212
+656, 244
+656, 276
+656, 308
 
 Each spawn point essentially has a 'twin' on the opposite side. If I only want
 one cat in the lane at once, it's twin has to be removed at the same time.
