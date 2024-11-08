@@ -1,22 +1,5 @@
 extends Node
 
-# could this be an array of packed scenes that can be chosen from?
-# with all cat parameters set?
-# is that easier?
-# then we can just handle the logic of instantiating X enemy type 
-# that is already chosen?
-# here is documentation on it
-# https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_exports.html#exporting-arrays
-
-# I could randomize textures with different behaviours possibly...
-# this could be confusing to the player though if they look different but
-# act the same as others.
-# perhaps variations could exist like color?
-# can also be done with textures
-#@export var enemy_textures: Array[Texture] = []
-
-# signal that enemy will emit when it has reached a position threshold
-# to tell the enemy_manager that it is off screen + lane should be open again
 
 # this could be turned into multiple packed scenes in an array
 @export var enemy_scene: PackedScene
