@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" path="res://scenes/game_objects/player/player.gd" id="1_pdcg6"]
 [ext_resource type="Script" path="res://scenes/game_objects/player/state_machine.gd" id="2_alk6w"]
-[ext_resource type="Texture2D" uid="uid://dyswl6aq5igir" path="res://assets/sprites/ralph.png" id="2_rkqnt"]
 [ext_resource type="Script" path="res://scenes/game_objects/player/wait_btm.gd" id="3_87pjr"]
 [ext_resource type="Script" path="res://scenes/game_objects/player/moving_up.gd" id="4_s5y56"]
 [ext_resource type="Script" path="res://scenes/game_objects/player/wait_top.gd" id="5_bosfj"]
@@ -14,6 +13,9 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_qoavk"]
 radius = 8.0
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2uqlo"]
+load_path = "res://.godot/imported/ralph.png-945b450108a8f0cee1c4bb65cf124ba7.ctex"
+
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 collision_mask = 7
 script = ExtResource("1_pdcg6")
@@ -22,7 +24,7 @@ script = ExtResource("1_pdcg6")
 shape = SubResource("CircleShape2D_qoavk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_rkqnt")
+texture = SubResource("CompressedTexture2D_2uqlo")
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("2_alk6w")

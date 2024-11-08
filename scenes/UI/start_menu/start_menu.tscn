@@ -3,10 +3,12 @@
 [ext_resource type="Theme" uid="uid://d3mnn2vdpemvj" path="res://resources/main_theme.tres" id="1_ehnkx"]
 [ext_resource type="Script" path="res://scenes/UI/start_menu/start_menu.gd" id="1_vbvoa"]
 [ext_resource type="FontFile" uid="uid://420mvaqtu2k0" path="res://fonts/pixel_font.ttf" id="2_1vqnp"]
-[ext_resource type="Texture2D" uid="uid://dyswl6aq5igir" path="res://assets/sprites/ralph.png" id="4_elcnm"]
 [ext_resource type="Texture2D" uid="uid://5cry2juen66v" path="res://assets/sprites/Peanut-Butter-32x32.png" id="4_kyklh"]
 [ext_resource type="Texture2D" uid="uid://bj6glpdrrmxyp" path="res://assets/sprites/cats/cat-black.png" id="6_85mfo"]
 [ext_resource type="Texture2D" uid="uid://dv51e8o2li7oh" path="res://assets/sprites/cats/cat-white.png" id="7_0xmvb"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2uqlo"]
+load_path = "res://.godot/imported/ralph.png-945b450108a8f0cee1c4bb65cf124ba7.ctex"
 
 [node name="StartMenu" type="Control"]
 layout_mode = 3
@@ -118,10 +120,11 @@ metadata/_edit_group_ = true
 [node name="Ralph" type="Sprite2D" parent="PeanutButter"]
 position = Vector2(-10, -190)
 scale = Vector2(10, 10)
-texture = ExtResource("4_elcnm")
+texture = SubResource("CompressedTexture2D_2uqlo")
 
 [node name="Cat" type="Sprite2D" parent="."]
-position = Vector2(107, 280)
+position = Vector2(107, 288)
+scale = Vector2(0.9, 0.9)
 texture = ExtResource("6_85mfo")
 
 [node name="WhiteCat" type="Sprite2D" parent="."]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6puvvienml2u"
-path="res://.godot/imported/ralph.png-945b450108a8f0cee1c4bb65cf124ba7.ctex"
+uid="uid://c81dp66ru802t"
+path="res://.godot/imported/chicken-drumstick16x16.png-806536231a275d94af64c576329717ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/ralph.png"
-dest_files=["res://.godot/imported/ralph.png-945b450108a8f0cee1c4bb65cf124ba7.ctex"]
+source_file="res://assets/sprites/food/chicken-drumstick16x16.png"
+dest_files=["res://.godot/imported/chicken-drumstick16x16.png-806536231a275d94af64c576329717ab.ctex"]
 
 [params]
 
