@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://d3mnn2vdpemvj" path="res://resources/main_theme.tres" id="1_ehnkx"]
 [ext_resource type="Script" path="res://scenes/UI/start_menu/start_menu.gd" id="1_vbvoa"]
-[ext_resource type="FontFile" uid="uid://420mvaqtu2k0" path="res://fonts/pixel_font.ttf" id="2_1vqnp"]
+[ext_resource type="FontFile" uid="uid://420mvaqtu2k0" path="res://assets/fonts/pixel_font.ttf" id="2_1vqnp"]
 [ext_resource type="Texture2D" uid="uid://5cry2juen66v" path="res://assets/sprites/score_bonus/Peanut-Butter-32x32.png" id="4_kyklh"]
 [ext_resource type="Texture2D" uid="uid://bj6glpdrrmxyp" path="res://assets/sprites/cats/cat-black.png" id="6_85mfo"]
 [ext_resource type="Texture2D" uid="uid://dv51e8o2li7oh" path="res://assets/sprites/cats/cat-white.png" id="7_0xmvb"]

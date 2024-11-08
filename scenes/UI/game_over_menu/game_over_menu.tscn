@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/UI/game_over_menu/game_over_menu.gd" id="1_d3v8l"]
 [ext_resource type="Theme" uid="uid://d3mnn2vdpemvj" path="res://resources/main_theme.tres" id="1_ph0sh"]
-[ext_resource type="FontFile" uid="uid://420mvaqtu2k0" path="res://fonts/pixel_font.ttf" id="2_bfcaa"]
+[ext_resource type="FontFile" uid="uid://420mvaqtu2k0" path="res://assets/fonts/pixel_font.ttf" id="2_bfcaa"]
 [ext_resource type="Script" path="res://scenes/UI/game_over_menu/score_label.gd" id="2_fauem"]
 [ext_resource type="Texture2D" uid="uid://cnc0jh2w5ldgv" path="res://assets/sprites/player/ralph-big.png" id="5_ofda3"]
 [ext_resource type="Texture2D" uid="uid://5cry2juen66v" path="res://assets/sprites/score_bonus/Peanut-Butter-32x32.png" id="6_w2fqt"]

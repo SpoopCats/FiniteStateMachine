@@ -1,8 +1,3 @@
-https://bit-by-bit-sound.itch.io/16-bit-starter-pack
-Minigame Monkey - Bert Cole
-Used as Background Music
-Not quite happy enough for Ralph maybe...
-
 https://tiptoptomcat.itch.io/8-bit-gameboy-songs-gb-studio
 Reclaimed
 TipTopTomCat
@@ -23,3 +18,20 @@ Vanilla Milkshake Created by Space Sandwich
 
 Kenny Tiny Dungeon
 Rat Sprite used and altered
+
+
+GAME DESIGN & CODE
+SpoopCats
+
+MUSIC
+Reclaimed.mp3 by TipTopTomCat.itch.io
+
+SFX
+pixel-ui-sfx-pack by JdSherbet.itch.io
+
+8bit-sfx-and-music-pack by HunterAudio.itch.io
+
+
+ART
+Original Art By SpoopCats
+Rat from Kenny TinyDungeon (modified)

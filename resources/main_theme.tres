@@ -4,7 +4,7 @@
 [ext_resource type="StyleBox" uid="uid://bwlraalfxm1fp" path="res://resources/button_hover.tres" id="2_jgjsa"]
 [ext_resource type="StyleBox" uid="uid://dich4w35od4yj" path="res://resources/button_main_style.tres" id="3_p73hp"]
 [ext_resource type="StyleBox" uid="uid://dvenp67mmktcx" path="res://resources/button_pressed.tres" id="4_3nw3g"]
-[ext_resource type="FontFile" uid="uid://420mvaqtu2k0" path="res://fonts/pixel_font.ttf" id="5_elkwr"]
+[ext_resource type="FontFile" uid="uid://420mvaqtu2k0" path="res://assets/fonts/pixel_font.ttf" id="5_elkwr"]
 
 [resource]
 default_font = ExtResource("5_elkwr")
