@@ -5,7 +5,7 @@ extends Control
 
 
 func _ready() -> void:
-	$MarginContainer/VBoxContainer/MarginContainer3/PlayAgain.grab_focus()
+	$ButtonContainer/VBoxContainer/MarginContainer3/PlayAgain.grab_focus()
 
 
 func _on_play_again_pressed() -> void:
