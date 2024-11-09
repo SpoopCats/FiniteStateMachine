@@ -11,4 +11,4 @@ func _ready() -> void:
 func _on_score_increase(score_amt: int):
 	score += score_amt
 	text = str(score)
-	ScoreTracker.current_score = score
+	ScoreManager.current_score = score

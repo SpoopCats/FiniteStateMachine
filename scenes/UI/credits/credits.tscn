@@ -14,6 +14,7 @@ grow_vertical = 2
 script = ExtResource("1_u6reo")
 
 [node name="Background" type="ColorRect" parent="."]
+layout_mode = 0
 offset_right = 640.0
 offset_bottom = 360.0
 color = Color(0.156863, 0.156863, 0.180392, 1)
