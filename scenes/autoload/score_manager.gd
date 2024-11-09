@@ -9,7 +9,9 @@ func _ready():
 	# make sure high score is up to date from savescorefile.txt file
 	load_score()
 
-
+# save function is called in player.tscn statemachine when the player dies
+# when moving up and down. If you ever make it possible to die while waiting
+# top and bottom, you'll need to call this function there as welL!+
 func save_score():
 	# open scoresave.txt with read and write access
 	var file = FileAccess.open(SCORESAVEFILE, FileAccess.WRITE_READ)

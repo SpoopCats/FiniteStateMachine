@@ -1,0 +1,6 @@
+Watch for impatience:
+	Art phase and menus phase sort of made me impatient to get something working
+	because I had never done menus/art for a game. I wanted to get something
+	going and working really quickly. It's one of the most poorly understood
+	parts of my project now because of this.
+	
