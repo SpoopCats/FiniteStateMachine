@@ -14,7 +14,7 @@ func save_score():
 	# open scoresave.txt with read and write access
 	var file = FileAccess.open(SCORESAVEFILE, FileAccess.WRITE_READ)
 	# store an int up to 4,294,967,296
-	file.store_32(high_score)
+	file.store_32(current_score)
 	# release use of the file in order to avoid "file is in use" errors
 	file = null
 
@@ -25,4 +25,4 @@ func load_score():
 	# ensure the file does exist
 	if FileAccess.file_exists(SCORESAVEFILE):
 		high_score = file.get_32()
-		print(high_score)
+		print("high score = " + str(high_score))

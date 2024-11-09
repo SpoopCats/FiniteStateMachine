@@ -39,6 +39,9 @@ func Physics_Update(delta: float):
 		if node_collided_with.is_in_group('enemy'):
 			#placeholder code for something that happens when Ralph hits enemies
 			GameOver.play()
+			# if score is higher than high score, save the high score
+			if ScoreManager.current_score > ScoreManager.high_score:
+				ScoreManager.save_score()
 			get_tree().change_scene_to_file('res://scenes/UI/game_over_menu/game_over_menu.tscn')
 
 
