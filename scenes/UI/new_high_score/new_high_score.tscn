@@ -22,4 +22,4 @@ size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.690196, 0.921569, 0.576471, 1)
 theme_override_fonts/font = ExtResource("1_xgw8t")
 theme_override_font_sizes/font_size = 11
-text = "New High Score!!!"
+text = "New High Score!"
