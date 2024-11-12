@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 
 @onready var timer_label: Label = $TimerLabel
@@ -7,8 +7,14 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	timer.timeout.connect(_on_timer_timeout)
 
+
+func _on_timer_timeout():
+	# tell GameEvents & GameOverManager that game ended by time expiring
+	GameEvents.emit_time_expired_game_over()
+	# load game_over_menu, ending the game
+	get_tree().change_scene_to_file('res://scenes/UI/game_over_menu/game_over_menu.tscn')
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -25,13 +31,13 @@ func format_seconds_to_string(seconds: float):
 
 # changes colour of timer to notify player that time is running out
 func time_running_out(time_left):
-	if time_left > 61:
+	if time_left > 60:
 		pass
-	if time_left < 61 and time_left > 11:
+	if time_left < 60 and time_left > 10:
 		# translating hex color f98284 to RGBA --> https://rgbacolorpicker.com/hex-to-rgba
 		# divide values by max value of 255 to get a value b/w 0.0 and 1.0
 		# e.g., red 249 / 255 = 0.97
 		timer_label.add_theme_color_override("font_color", Color(0.97, 0.50, 0.52, 1))
-	if time_left <= 11:
+	if time_left <= 10:
 		# this red isn't currently in the color palette
 		timer_label.add_theme_color_override("font_color", Color.TOMATO)

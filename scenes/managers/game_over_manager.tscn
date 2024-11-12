@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhfhgttk60n8p"]
+
+[ext_resource type="Script" path="res://scenes/managers/game_over_manager.gd" id="1_r6jr1"]
+
+[node name="GameOverManager" type="Node"]
+script = ExtResource("1_r6jr1")

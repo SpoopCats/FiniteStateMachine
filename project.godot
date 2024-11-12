@@ -20,6 +20,7 @@ GameEvents="*res://scenes/autoload/game_events.tscn"
 ScoreManager="*res://scenes/autoload/score_manager.tscn"
 GameOver="*res://assets/sounds/sfx/game_over.tscn"
 BkgroundMusic="*res://assets/sounds/music/bkground_music.tscn"
+GameOverManager="*res://scenes/managers/game_over_manager.tscn"
 
 [display]
 
