@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cnc0jh2w5ldgv" path="res://assets/sprites/player/ralph-big.png" id="5_ofda3"]
 [ext_resource type="Script" path="res://scenes/UI/game_over_menu/high_score_label.gd" id="5_tpoqf"]
 [ext_resource type="Texture2D" uid="uid://5cry2juen66v" path="res://assets/sprites/score_bonus/Peanut-Butter-32x32.png" id="6_w2fqt"]
-[ext_resource type="PackedScene" uid="uid://c6cc130my4iid" path="res://scenes/UI/msg_game_over_by_time/msg_game_over_by_time.tscn" id="7_1rc3a"]
+[ext_resource type="PackedScene" uid="uid://c6cc130my4iid" path="res://scenes/UI/msg_game_over_type/msg_game_over_type.tscn" id="7_1rc3a"]
 [ext_resource type="Texture2D" uid="uid://cvobhtyplhcnd" path="res://assets/sprites/cats/cat-brown.png" id="7_7m46w"]
 [ext_resource type="Texture2D" uid="uid://cl16a1yue6yuw" path="res://assets/sprites/cats/cat-orange.png" id="7_ejopx"]
 
@@ -102,12 +102,12 @@ offset_top = 62.0
 offset_right = 81.0
 offset_bottom = 62.0
 
-[node name="MsgGameOverByTime" parent="." instance=ExtResource("7_1rc3a")]
+[node name="MsgGameOverType" parent="." instance=ExtResource("7_1rc3a")]
 layout_mode = 1
-offset_left = 451.0
-offset_top = 49.0
-offset_right = 451.0
-offset_bottom = 49.0
+offset_left = 430.0
+offset_top = 41.0
+offset_right = 430.0
+offset_bottom = 41.0
 
 [node name="PeanutButter" type="Sprite2D" parent="."]
 position = Vector2(320, 330)

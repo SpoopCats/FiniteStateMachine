@@ -40,11 +40,13 @@ There are 3 "manager scenes" to be aware of that can tweak gameplay:
 		top and bottom of the screen.
 	- score_bonus_manager = governs peanut butter score bonus spawning
 
-There are 4 "autoload scenes" to be aware of:
+There are 5 "autoload scenes" to be aware of:
 	- GameEvents = a signal bus so signals are available to all scenes/nodes
 	- ScoreTracker = makes a score value available to all scenes
 	- GameOver = a sound effect that needs to play across the the main.tscn and
 		the game_over_menu.tscn
+	- GameOverManager = tracks how the game ended with boolean values. Did the
+		player hit an enemy or did the game timer expire?
 	- BackgroundMusic = globally available so music plays on all scenes
 
 WHATS POTENTIALLY CONFUSING?
@@ -71,3 +73,10 @@ lanes from an array so nothing can spawn there, or add a lane back into an array
 so something can again spawn in that lane.
 
 In it's current state, I haven't had to use lane closing for any reason.
+
+Additionally, the GameOverManager flips some global variable values for how
+the game ended:
+	var game_over_by_time: bool = false
+	var game_over_by_player_hitting_enemy: bool = false
+Signals are emitted from game_timer.tscn when the timer runs out that flips
+this value. 

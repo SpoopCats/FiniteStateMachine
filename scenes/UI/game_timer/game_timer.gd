@@ -13,6 +13,9 @@ func _ready() -> void:
 func _on_timer_timeout():
 	# tell GameEvents & GameOverManager that game ended by time expiring
 	GameEvents.emit_time_expired_game_over()
+	# save score if current_score is greater than high_score
+	if ScoreManager.current_score > ScoreManager.high_score:
+		ScoreManager.save_score()
 	# load game_over_menu, ending the game
 	get_tree().change_scene_to_file('res://scenes/UI/game_over_menu/game_over_menu.tscn')
 
