@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://bty00imkvp3bu"]
+[gd_scene load_steps=3 format=3 uid="uid://bty00imkvp3bu"]
 
+[ext_resource type="Script" path="res://scenes/UI/new_high_score/new_high_score.gd" id="1_knwxa"]
 [ext_resource type="FontFile" uid="uid://420mvaqtu2k0" path="res://assets/fonts/pixel_font.ttf" id="1_xgw8t"]
 
 [node name="NewHighScore" type="Control"]
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_knwxa")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0

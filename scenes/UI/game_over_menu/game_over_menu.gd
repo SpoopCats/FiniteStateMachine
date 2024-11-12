@@ -4,15 +4,25 @@ extends Control
 # see this tutorial to setup: https://youtu.be/Mx3iyz8AUAE?si=6mYd4O2LqKQbzZlQ&t=165
 @export var new_high_score_scene : PackedScene
 @onready var new_high_score_label: Control = $NewHighScore
+@onready var msg_game_over_by_time: Control = $MsgGameOverByTime
 
 func _ready() -> void:
 	$ButtonContainer/VBoxContainer/MarginContainer3/PlayAgain.grab_focus()
 	if ScoreManager.current_score == ScoreManager.high_score:
 		# do something to notify player of new high score
 		new_high_score_label.show()
-
+	if GameOverManager.game_over_by_time == true:
+		# do something to notify player that game ended due to time expiring
+		msg_game_over_by_time.show()
+		print("Game ended by time!")
+	if GameOverManager.game_over_by_player_hitting_enemy == true:
+		# do things to display that game ended by time
+		print("Game ended by hitting enemy!")
 
 func _on_play_again_pressed() -> void:
+	# reset game over tracking to both game over scenarios to false
+	GameOverManager.game_over_by_player_hitting_enemy = false
+	GameOverManager.game_over_by_time = false
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
 
 

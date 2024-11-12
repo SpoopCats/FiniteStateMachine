@@ -1,8 +1,8 @@
 extends Control
 
 
-@onready var timer_label: Label = $TimerLabel
-@onready var timer: Timer = $Timer
+@onready var timer_label: Label = $MarginContainer/TimerLabel
+@onready var timer: Timer = $MarginContainer/Timer
 
 
 # Called when the node enters the scene tree for the first time.

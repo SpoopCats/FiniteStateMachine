@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6cc130my4iid"]
+
+[ext_resource type="FontFile" uid="uid://420mvaqtu2k0" path="res://assets/fonts/pixel_font.ttf" id="1_3e03e"]
+[ext_resource type="Script" path="res://scenes/UI/msg_game_over_by_time/msg_game_over_by_time.gd" id="1_dl1qv"]
+
+[node name="MsgGameOverByTime" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dl1qv")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+rotation = 0.13439
+
+[node name="GameOverByTimeLabel" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.690196, 0.921569, 0.576471, 1)
+theme_override_fonts/font = ExtResource("1_3e03e")
+theme_override_font_sizes/font_size = 11
+text = "Time Expired!"
