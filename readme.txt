@@ -79,4 +79,6 @@ the game ended:
 	var game_over_by_time: bool = false
 	var game_over_by_player_hitting_enemy: bool = false
 Signals are emitted from game_timer.tscn when the timer runs out that flips
-this value. 
+this value to true. If the player hits an enemy it emits a signal that flips the
+other value to true. When the replay button is hit in the game_over_menu.tscn
+it flips the values back to false.

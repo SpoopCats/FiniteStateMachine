@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0xtal1jidwju"]
+
+[ext_resource type="FontFile" uid="uid://420mvaqtu2k0" path="res://assets/fonts/pixel_font.ttf" id="1_hwvwc"]
+[ext_resource type="PackedScene" uid="uid://bnftfiptwbnc8" path="res://scenes/UI/tutorial/space_key.tscn" id="2_ire16"]
+
+[node name="Tutorial" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 144.0
+offset_right = 384.0
+offset_bottom = 216.0
+pivot_offset = Vector2(64, 36)
+metadata/_edit_group_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="PressLabel" type="Label" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.690196, 0.921569, 0.576471, 1)
+theme_override_fonts/font = ExtResource("1_hwvwc")
+text = "PRESS"
+horizontal_alignment = 1
+
+[node name="SpacingContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="ToMoveLabel" type="Label" parent="VBoxContainer/MarginContainer3"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.690196, 0.921569, 0.576471, 1)
+theme_override_fonts/font = ExtResource("1_hwvwc")
+text = "TO MOVE!"
+horizontal_alignment = 1
+
+[node name="SpaceKey" parent="VBoxContainer" instance=ExtResource("2_ire16")]
+position = Vector2(63, 38)

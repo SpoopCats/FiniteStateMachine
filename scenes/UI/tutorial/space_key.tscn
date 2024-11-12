@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnftfiptwbnc8"]
+
+[ext_resource type="FontFile" uid="uid://420mvaqtu2k0" path="res://assets/fonts/pixel_font.ttf" id="1_78trs"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4sgwo"]
+load_path = "res://.godot/imported/space-key-16x64.png-4bcacd57e8db808a646a79635d1df7b2.ctex"
+
+[node name="SpaceKey" type="Sprite2D"]
+position = Vector2(320, 180)
+scale = Vector2(0.3, 0.3)
+texture = SubResource("CompressedTexture2D_4sgwo")
+
+[node name="KeyLabel" type="Label" parent="."]
+offset_left = -80.0
+offset_top = -20.0
+offset_right = 80.0
+offset_bottom = 12.0
+theme_override_colors/font_color = Color(0.156863, 0.156863, 0.180392, 1)
+theme_override_colors/font_shadow_color = Color(0.690196, 0.921569, 0.576471, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("1_78trs")
+theme_override_font_sizes/font_size = 32
+text = "SPACE"
