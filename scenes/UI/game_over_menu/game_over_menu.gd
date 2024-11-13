@@ -34,6 +34,7 @@ func _on_play_again_pressed() -> void:
 	# reset game over tracking to both game over scenarios to false
 	GameOverManager.game_over_by_player_hitting_enemy = false
 	GameOverManager.game_over_by_time = false
+	GameOverManager.tutorial_needed = false
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
 
 

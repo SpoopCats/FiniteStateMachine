@@ -4,8 +4,9 @@ extends Node
 # either by time expiring or by player hitting enemy
 var game_over_by_time: bool = false
 var game_over_by_player_hitting_enemy: bool = false
-
-
+# counts number of gameovers so game knows if it should display
+# tutorial.tscn or not
+var tutorial_needed = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
