@@ -97,17 +97,17 @@ script = ExtResource("5_tpoqf")
 
 [node name="NewHighScore" parent="." instance=ExtResource("3_w33hu")]
 layout_mode = 1
-offset_left = 81.0
-offset_top = 62.0
-offset_right = 81.0
-offset_bottom = 62.0
+offset_left = 39.0
+offset_top = 161.0
+offset_right = 39.0
+offset_bottom = 161.0
 
 [node name="MsgGameOverType" parent="." instance=ExtResource("7_1rc3a")]
 layout_mode = 1
-offset_left = 430.0
-offset_top = 41.0
-offset_right = 430.0
-offset_bottom = 41.0
+offset_left = 454.0
+offset_top = 161.0
+offset_right = 454.0
+offset_bottom = 161.0
 
 [node name="PeanutButter" type="Sprite2D" parent="."]
 position = Vector2(320, 330)

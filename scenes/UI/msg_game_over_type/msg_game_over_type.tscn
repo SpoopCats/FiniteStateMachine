@@ -16,7 +16,6 @@ script = ExtResource("1_dl1qv")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-rotation = 0.13439
 
 [node name="GameOverType" type="Label" parent="MarginContainer"]
 layout_mode = 2

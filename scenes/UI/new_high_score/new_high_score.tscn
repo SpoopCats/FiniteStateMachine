@@ -16,7 +16,6 @@ script = ExtResource("1_knwxa")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-rotation = -0.13439
 
 [node name="NewHighScoreLabel" type="Label" parent="MarginContainer"]
 layout_mode = 2

@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://bxe0xsbvpilv0"]
+[gd_scene load_steps=11 format=3 uid="uid://bxe0xsbvpilv0"]
 
+[ext_resource type="Texture2D" uid="uid://chqj5r31mcb8h" path="res://assets/sprites/background/PBRalph-Background-640x360.png" id="1_4cxth"]
 [ext_resource type="PackedScene" uid="uid://ddy0w3bgh537x" path="res://scenes/managers/enemy_manager.tscn" id="1_087od"]
 [ext_resource type="PackedScene" uid="uid://dlebo6pg020d3" path="res://scenes/game_objects/pedestals/top_pedestal.tscn" id="1_ci7hf"]
 [ext_resource type="PackedScene" uid="uid://ctkneh48m6vhw" path="res://scenes/UI/game_timer/game_timer.tscn" id="1_rx16t"]
@@ -12,18 +13,25 @@
 
 [node name="Main" type="Node2D" groups=["game"]]
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(320, 180)
+texture = ExtResource("1_4cxth")
+
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_right = 640.0
 offset_bottom = 360.0
 color = Color(0.156863, 0.156863, 0.180392, 1)
 
 [node name="ScoreCounter" parent="." instance=ExtResource("4_whcrg")]
+visible = false
 
 [node name="EnemyManager" parent="." instance=ExtResource("1_087od")]
 
 [node name="FoodManager" parent="." instance=ExtResource("2_ljjo4")]
 
 [node name="GameTimer" parent="FoodManager" instance=ExtResource("1_rx16t")]
+visible = false
 
 [node name="ScoreBonusManager" parent="." instance=ExtResource("3_xeayt")]
 

@@ -82,3 +82,8 @@ Signals are emitted from game_timer.tscn when the timer runs out that flips
 this value to true. If the player hits an enemy it emits a signal that flips the
 other value to true. When the replay button is hit in the game_over_menu.tscn
 it flips the values back to false.
+	The GameOverManager also governs the tutorial which is a bit strange. It
+flips a boolean to false on
+		var tutorial_needed
+	When the replay button is pressed to ensure that the tutorial is only showed
+	once.
