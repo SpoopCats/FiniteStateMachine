@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://bxe0xsbvpilv0"]
+[gd_scene load_steps=12 format=3 uid="uid://bxe0xsbvpilv0"]
 
 [ext_resource type="Texture2D" uid="uid://chqj5r31mcb8h" path="res://assets/sprites/background/PBRalph-Background-640x360.png" id="1_4cxth"]
 [ext_resource type="PackedScene" uid="uid://ddy0w3bgh537x" path="res://scenes/managers/enemy_manager.tscn" id="1_087od"]
 [ext_resource type="PackedScene" uid="uid://dlebo6pg020d3" path="res://scenes/game_objects/pedestals/top_pedestal.tscn" id="1_ci7hf"]
 [ext_resource type="PackedScene" uid="uid://ctkneh48m6vhw" path="res://scenes/UI/game_timer/game_timer.tscn" id="1_rx16t"]
 [ext_resource type="PackedScene" uid="uid://oyajyei4imki" path="res://scenes/game_objects/pedestals/btm_pedestal.tscn" id="2_1in7w"]
+[ext_resource type="Texture2D" uid="uid://cl78x3ifr1o3o" path="res://assets/sprites/background/UI-Frame.png" id="2_541sa"]
 [ext_resource type="PackedScene" uid="uid://dusjs4acn2owf" path="res://scenes/managers/food_manager.tscn" id="2_ljjo4"]
 [ext_resource type="PackedScene" uid="uid://cy5udr3a1n467" path="res://scenes/game_objects/player/player.tscn" id="2_t7qp4"]
 [ext_resource type="PackedScene" uid="uid://b53ft8643ldn" path="res://scenes/managers/score_bonus_manager.tscn" id="3_xeayt"]
@@ -17,6 +18,15 @@
 position = Vector2(320, 180)
 texture = ExtResource("1_4cxth")
 
+[node name="UIFrameTime" type="Sprite2D" parent="."]
+position = Vector2(587, 29)
+texture = ExtResource("2_541sa")
+
+[node name="UIFrameScore" type="Sprite2D" parent="."]
+position = Vector2(44, 29)
+scale = Vector2(0.8, 1)
+texture = ExtResource("2_541sa")
+
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
 offset_right = 640.0
@@ -24,14 +34,12 @@ offset_bottom = 360.0
 color = Color(0.156863, 0.156863, 0.180392, 1)
 
 [node name="ScoreCounter" parent="." instance=ExtResource("4_whcrg")]
-visible = false
 
 [node name="EnemyManager" parent="." instance=ExtResource("1_087od")]
 
 [node name="FoodManager" parent="." instance=ExtResource("2_ljjo4")]
 
 [node name="GameTimer" parent="FoodManager" instance=ExtResource("1_rx16t")]
-visible = false
 
 [node name="ScoreBonusManager" parent="." instance=ExtResource("3_xeayt")]
 
