@@ -7,6 +7,13 @@ extends Node
 @onready var spawn_timer: Timer = $SpawnTimer
 # reference to the Main node game scene
 @onready var game: Node2D = $".."
+#reference to the in-game timer, different than the spawn timer!
+@onready var game_timer: Timer = $"../GameTimer/MarginContainer/Timer"
+
+
+# range for spawn timer to increase difficulty as the game goes on
+var lower_bound_sec: float = 0.75
+var upper_bound_sec: float = 1.5
 
 
 # possible spawn lanes, just two on the right currently.
@@ -39,7 +46,7 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	pass
+	increase_difficulty()
 
 
 func _on_off_screen(lane_to_open):
@@ -56,7 +63,7 @@ func _pick_and_close_lane(spawns: Array):
 # here is where all the code for enemy instantiation happens
 func _on_spawn_timer_timeout():
 	# set the timer to a new value to vary enemy spawn rate
-	randomize_timer()
+	randomize_timer(lower_bound_sec, upper_bound_sec)
 	var enemy = enemy_scene.instantiate()
 	# is closing the lane necessary right now? maybe if powerups get added to the game?
 	var enemy_lane = _pick_and_close_lane(spawn_points)
@@ -69,6 +76,17 @@ func _on_spawn_timer_timeout():
 	game.add_child(enemy)
 	
 # randomize spawn timer a bit so it's not just 1 second
-func randomize_timer():
-	var timer_value = randf_range(0.75,1.5)
+func randomize_timer(lower: float, upper: float):
+	var timer_value = randf_range(lower ,upper)
 	spawn_timer.wait_time = timer_value
+	
+# increase difficulty based upon amount of time left on in-game timer
+# the spawn_rate rolls upper and lower bound are editted to make spawns more
+# likely
+func increase_difficulty():
+	if game_timer.time_left < 60:
+		upper_bound_sec = 1.15
+		lower_bound_sec = 0.5
+	if game_timer.time_left < 30:
+		upper_bound_sec = 1
+		lower_bound_sec = 0.35
