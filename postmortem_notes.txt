@@ -4,3 +4,8 @@ Watch for impatience:
 	going and working really quickly. It's one of the most poorly understood
 	parts of my project now because of this.
 	
+Menus are a mess
+
+I don't understand custom resources
+
+I don't understand Themes

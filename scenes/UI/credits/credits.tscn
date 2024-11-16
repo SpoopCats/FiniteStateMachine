@@ -47,7 +47,14 @@ grow_horizontal = 2
 
 [node name="Title" type="Label" parent="TitleContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.968627, 0.894118, 1)
+theme_override_colors/font_shadow_color = Color(0.690196, 0.921569, 0.576471, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_outline_size = 2
 theme_override_fonts/font = ExtResource("3_r5l1m")
+theme_override_font_sizes/font_size = 25
 text = "CREDITS"
 horizontal_alignment = 1
 
@@ -69,7 +76,7 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("3_r5l1m")
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 11
 text = "GAME DESIGN & CODE
 SpoopCats
 
@@ -80,11 +87,13 @@ SFX
 pixel-ui-sfx-pack by JdSherbert.itch.io
 8bit-sfx-and-music-pack by HunterAudio.itch.io
 
-
-ART
+ART & ANIMATION
 Original Art By SpoopCats
 Rat Sprite from Kenney-Assets.itch.io
-TinyDungeon (modified)"
+TinyDungeon (modified)
+
+COLOR PALETTE
+Vanilla Milkshake by Space Sandwich via LowSpec.com"
 horizontal_alignment = 1
 
 [connection signal="pressed" from="ButtonContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
