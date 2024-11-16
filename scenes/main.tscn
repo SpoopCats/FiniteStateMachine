@@ -27,11 +27,9 @@ position = Vector2(44, 29)
 scale = Vector2(0.8, 1)
 texture = ExtResource("2_541sa")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
+[node name="GameTimer" parent="." instance=ExtResource("1_rx16t")]
+offset_left = 640.0
 offset_right = 640.0
-offset_bottom = 360.0
-color = Color(0.156863, 0.156863, 0.180392, 1)
 
 [node name="ScoreCounter" parent="." instance=ExtResource("4_whcrg")]
 
@@ -51,7 +49,3 @@ position = Vector2(320, 8)
 position = Vector2(320, 352)
 
 [node name="Tutorial" parent="." instance=ExtResource("9_41b6p")]
-
-[node name="GameTimer" parent="." instance=ExtResource("1_rx16t")]
-offset_left = 640.0
-offset_right = 640.0
