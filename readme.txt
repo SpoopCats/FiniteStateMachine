@@ -87,3 +87,12 @@ flips a boolean to false on
 		var tutorial_needed
 	When the replay button is pressed to ensure that the tutorial is only showed
 	once.
+
+DIFFICULTY
+
+Difficulty increases at 60 and 30 seconds remaining. The enemy spawns increase,
+but the probability of bonuses spawning also increases. These are controlled in
+the score_bonus_manager.gd and enemy_manager.gd scripts. Edit these two funcs
+to modify the difficulty:
+	func _increase_difficulty():
+	func _increase_bonus_spawn_rate():

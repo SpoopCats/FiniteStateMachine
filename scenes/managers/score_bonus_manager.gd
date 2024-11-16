@@ -3,8 +3,10 @@ extends Node
 @export var score_bonus_scene: PackedScene
 # reference to the main node
 @onready var game: Node2D = $".."
+# timer for rolling if a new bonus will spawn
 @onready var bonus_timer: Timer = $BonusTimer
-@export var spawn_roll_challenge: int = 85 #must roll 85 or higher on D100
+# threshold that roll must equal or beat e.g., 85 = roll an 8 or higher
+@export var spawn_roll_challenge: int = 85 
 # reference to in-game timer
 @onready var game_timer: Timer = $"../GameTimer/MarginContainer/Timer"
 
