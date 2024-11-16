@@ -5,6 +5,8 @@ extends Node
 @onready var game: Node2D = $".."
 @onready var bonus_timer: Timer = $BonusTimer
 @export var spawn_roll_challenge: int = 85 #must roll 85 or higher on D100
+# reference to in-game timer
+@onready var game_timer: Timer = $"../GameTimer/MarginContainer/Timer"
 
 # possible lanes to spawn in, currently the same as enemy spawn points
 # this should maybe be a resource since enemy_manager uses it too
@@ -34,9 +36,13 @@ func _ready() -> void:
 	bonus_timer.timeout.connect(roll_for_bonus_spawn)
 
 
+func _process(delta: float) -> void:
+	_increase_bonus_spawn_rate()
+
+
 func roll_for_bonus_spawn():
 	# roll D100
-	var roll = randi_range(0, 100)
+	var roll = randi_range(1, 100)
 	# no spawn, exit code
 	if roll < spawn_roll_challenge:
 		return
@@ -49,3 +55,10 @@ func roll_for_bonus_spawn():
 		if bonus.position.x > 640:
 			bonus.dir = Vector2.LEFT
 		game.add_child(bonus)
+
+# increases the spawn rate of bonuses as game time progresses
+func _increase_bonus_spawn_rate():
+	if game_timer.time_left < 60:
+		spawn_roll_challenge = 65
+	if game_timer.time_left < 30:
+		spawn_roll_challenge = 45

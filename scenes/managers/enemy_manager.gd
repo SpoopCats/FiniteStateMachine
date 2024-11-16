@@ -46,7 +46,7 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	increase_difficulty()
+	_increase_difficulty()
 
 
 func _on_off_screen(lane_to_open):
@@ -83,7 +83,7 @@ func randomize_timer(lower: float, upper: float):
 # increase difficulty based upon amount of time left on in-game timer
 # the spawn_rate rolls upper and lower bound are editted to make spawns more
 # likely
-func increase_difficulty():
+func _increase_difficulty():
 	if game_timer.time_left < 60:
 		upper_bound_sec = 1.15
 		lower_bound_sec = 0.5

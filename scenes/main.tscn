@@ -55,3 +55,5 @@ position = Vector2(320, 352)
 [node name="GameTimer" parent="." instance=ExtResource("1_rx16t")]
 offset_left = 640.0
 offset_right = 640.0
+
+[editable path="GameTimer"]
