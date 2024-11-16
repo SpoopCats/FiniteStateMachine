@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cmunhw0lkurlv"]
+[gd_scene load_steps=4 format=3 uid="uid://cmunhw0lkurlv"]
 
 [ext_resource type="Script" path="res://scenes/UI/settings_menu/settings_menu.gd" id="1_4wmhx"]
+[ext_resource type="FontFile" uid="uid://420mvaqtu2k0" path="res://assets/fonts/pixel_font.ttf" id="2_1t7xw"]
+[ext_resource type="Theme" uid="uid://d3mnn2vdpemvj" path="res://resources/main_theme.tres" id="2_y2dp5"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -36,6 +38,7 @@ layout_mode = 2
 
 [node name="VolumeLabel" type="Label" parent="SettingsContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1t7xw")
 text = "Volume"
 
 [node name="VolumeHSlider" type="HSlider" parent="SettingsContainer/VBoxContainer"]
@@ -47,6 +50,7 @@ allow_lesser = true
 
 [node name="MuteVolumeLabel" type="Label" parent="SettingsContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1t7xw")
 text = "Mute Volume"
 
 [node name="MuteCheckBox" type="CheckBox" parent="SettingsContainer/VBoxContainer"]
@@ -54,6 +58,7 @@ layout_mode = 2
 
 [node name="MuteMusicLabel" type="Label" parent="SettingsContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1t7xw")
 text = "Mute Music"
 
 [node name="MuteMusicCheckBox" type="CheckBox" parent="SettingsContainer/VBoxContainer"]
@@ -61,6 +66,9 @@ layout_mode = 2
 
 [node name="BackButton" type="Button" parent="SettingsContainer/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("2_y2dp5")
+theme_override_colors/font_color = Color(1, 0.968627, 0.894118, 1)
+theme_override_constants/outline_size = 1
 text = "BACK"
 
 [connection signal="value_changed" from="SettingsContainer/VBoxContainer/VolumeHSlider" to="." method="_on_h_slider_value_changed"]
