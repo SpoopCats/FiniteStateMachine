@@ -6,6 +6,7 @@ class_name MovingDown
 
 @onready var player: CharacterBody2D = $"../.."
 @onready var score_bonus: AudioStreamPlayer2D = $"../../ScoreBonus"
+#@export var +5_label: PackedScene
 
 
 var dir: Vector2 = Vector2.DOWN
