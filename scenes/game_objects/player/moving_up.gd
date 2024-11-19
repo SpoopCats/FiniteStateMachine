@@ -5,7 +5,6 @@ class_name MovingUp
 
 
 @onready var player: CharacterBody2D = $"../.."
-@onready var score_bonus: AudioStreamPlayer2D = $"../../ScoreBonus"
 @export var pts_label_scene: PackedScene
 
 

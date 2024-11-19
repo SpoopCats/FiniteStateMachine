@@ -1,14 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://brea3ejwmo2bu"]
+[gd_scene load_steps=10 format=3 uid="uid://brea3ejwmo2bu"]
 
 [ext_resource type="Script" path="res://scenes/game_objects/food/food.gd" id="1_2x171"]
 [ext_resource type="Texture2D" uid="uid://d3yuktaahc4uj" path="res://assets/sprites/food/apple-16x16.png" id="2_imhhl"]
 [ext_resource type="Texture2D" uid="uid://c81dp66ru802t" path="res://assets/sprites/food/chicken-drumstick16x16.png" id="3_vs0hl"]
 [ext_resource type="Texture2D" uid="uid://k5400ogvvuj6" path="res://assets/sprites/food/donut-2-16x16.png" id="4_isg2m"]
+[ext_resource type="Texture2D" uid="uid://1mtldw5b43rd" path="res://assets/sprites/food/cookie-bitten-16x16.png" id="5_luuyl"]
+[ext_resource type="Texture2D" uid="uid://bkjddwq8hyh8i" path="res://assets/sprites/food/hotdog-16x16.png" id="6_emgve"]
+[ext_resource type="Texture2D" uid="uid://d3lqaxb516cll" path="res://assets/sprites/food/ice-cream-16x16.png" id="7_ni8jd"]
+[ext_resource type="Texture2D" uid="uid://c47qdw8ig4p60" path="res://assets/sprites/food/pear-16x16.png" id="8_1u272"]
+[ext_resource type="Texture2D" uid="uid://dqvejo5qmcrxf" path="res://assets/sprites/food/watermelon-slice-16x16.png" id="9_gplsx"]
 
 [node name="Food" type="Node2D" groups=["food"]]
 position = Vector2(284, 131)
 script = ExtResource("1_2x171")
-food_textures = Array[Texture]([ExtResource("2_imhhl"), ExtResource("3_vs0hl"), ExtResource("4_isg2m")])
+food_textures = Array[Texture]([ExtResource("2_imhhl"), ExtResource("3_vs0hl"), ExtResource("4_isg2m"), ExtResource("5_luuyl"), ExtResource("6_emgve"), ExtResource("7_ni8jd"), ExtResource("8_1u272"), ExtResource("9_gplsx")])
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_imhhl")
