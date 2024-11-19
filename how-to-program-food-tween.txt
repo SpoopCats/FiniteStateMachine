@@ -1,0 +1,16 @@
+SCRIPTS AND SCENES INVOLVED
+
+main.tscn = redesign the background to have the garbage can and the garbage bag
+be spots where the food spawns
+food.gd = all the tween animations
+food_manager.gd = starting position of the food plus it has signals connected
+for spawning food at the top or the bottom of the screen...
+
+var top_food_pos = Vector2(320, 8)
+var btm_food_pos = Vector2(320, 352)
+
+GameEvents.spawn_food_top.connect(_on_spawn_food_top)
+GameEvents.spawn_food_btm.connect(_on_spawn_foot_btm)
+
+!!! HOW WILL THE FOOD KNOW IF IT'S SPAWNING AT THE TOP OR THE BOTTOM? IN THE
+FOOD SCENE? !!!

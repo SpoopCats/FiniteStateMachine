@@ -6,7 +6,7 @@ extends Node
 # timer for rolling if a new bonus will spawn
 @onready var bonus_timer: Timer = $BonusTimer
 # threshold that roll must equal or beat e.g., 85 = roll an 8 or higher
-@export var spawn_roll_challenge: int = 1
+@export var spawn_roll_challenge: int = 85
 # reference to in-game timer
 @onready var game_timer: Timer = $"../GameTimer/MarginContainer/Timer"
 
