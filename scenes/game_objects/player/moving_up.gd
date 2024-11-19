@@ -6,6 +6,7 @@ class_name MovingUp
 
 @onready var player: CharacterBody2D = $"../.."
 @onready var score_bonus: AudioStreamPlayer2D = $"../../ScoreBonus"
+@export var pts_label_scene: PackedScene
 
 
 var dir: Vector2 = Vector2.UP
@@ -32,8 +33,13 @@ func Physics_Update(delta: float):
 		if node_collided_with.is_in_group('top_pedestal'):
 			Transitioned.emit(self, "waittop")
 		if node_collided_with.is_in_group('score_bonus'):
+			# instantiate the pts label to tell player they got bonus pts
+			var scene_instance = pts_label_scene.instantiate()
+			var instance_pos = collision_info.get_position()
+			instance_pos.x = instance_pos.x + 8
+			scene_instance.position = instance_pos
+			get_parent().add_child(scene_instance)
 			# increases score by score_bonus' property of score_bonus_amt
-			score_bonus.play()
 			GameEvents.emit_increase_score(node_collided_with.score_bonus_amt)
 			node_collided_with.queue_free()
 		if node_collided_with.is_in_group('enemy'):

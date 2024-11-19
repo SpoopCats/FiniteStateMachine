@@ -5,10 +5,10 @@
 [ext_resource type="Script" path="res://scenes/game_objects/player/wait_btm.gd" id="3_87pjr"]
 [ext_resource type="Script" path="res://scenes/game_objects/player/moving_up.gd" id="4_s5y56"]
 [ext_resource type="Script" path="res://scenes/game_objects/player/wait_top.gd" id="5_bosfj"]
+[ext_resource type="PackedScene" uid="uid://bjxoxbfkj0tsn" path="res://scenes/UI/+5_label/+pts_label.tscn" id="5_ilyd0"]
 [ext_resource type="Script" path="res://scenes/game_objects/player/moving_down.gd" id="6_att2s"]
 [ext_resource type="PackedScene" uid="uid://c78kx521pu717" path="res://assets/sounds/sfx/top_sfx.tscn" id="8_rsc6e"]
 [ext_resource type="PackedScene" uid="uid://tg3qapghkufc" path="res://assets/sounds/sfx/btm_sfx.tscn" id="9_5ijds"]
-[ext_resource type="PackedScene" uid="uid://bt2arus0tm3hp" path="res://assets/sounds/sfx/score_bonus.tscn" id="10_w7u5x"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qoavk"]
 radius = 8.0
@@ -35,15 +35,15 @@ script = ExtResource("3_87pjr")
 
 [node name="MovingUp" type="Node" parent="StateMachine"]
 script = ExtResource("4_s5y56")
+pts_label_scene = ExtResource("5_ilyd0")
 
 [node name="WaitTop" type="Node" parent="StateMachine"]
 script = ExtResource("5_bosfj")
 
 [node name="MovingDown" type="Node" parent="StateMachine"]
 script = ExtResource("6_att2s")
+pts_label_scene = ExtResource("5_ilyd0")
 
 [node name="TopSfx" parent="." instance=ExtResource("8_rsc6e")]
 
 [node name="BtmSfx" parent="." instance=ExtResource("9_5ijds")]
-
-[node name="ScoreBonus" parent="." instance=ExtResource("10_w7u5x")]

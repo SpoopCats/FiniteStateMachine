@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bjxoxbfkj0tsn"]
+[gd_scene load_steps=4 format=3 uid="uid://bjxoxbfkj0tsn"]
 
 [ext_resource type="FontFile" uid="uid://420mvaqtu2k0" path="res://assets/fonts/pixel_font.ttf" id="1_yuyoo"]
 [ext_resource type="Script" path="res://scenes/UI/+5_label/+pts_label.gd" id="2_6std4"]
+[ext_resource type="PackedScene" uid="uid://bt2arus0tm3hp" path="res://assets/sounds/sfx/score_bonus.tscn" id="3_wloeo"]
 
 [node name="+PtsLabel" type="Label"]
 offset_left = 320.0
@@ -15,3 +16,5 @@ theme_override_constants/outline_size = 1
 theme_override_fonts/font = ExtResource("1_yuyoo")
 text = "+5"
 script = ExtResource("2_6std4")
+
+[node name="ScoreBonus" parent="." instance=ExtResource("3_wloeo")]
