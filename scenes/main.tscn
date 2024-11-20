@@ -16,6 +16,12 @@
 
 [node name="Main" type="Node2D" groups=["game"]]
 
+[node name="EnemyManager" parent="." instance=ExtResource("1_087od")]
+
+[node name="ScoreBonusManager" parent="." instance=ExtResource("3_xeayt")]
+
+[node name="FoodManager" parent="." instance=ExtResource("2_ljjo4")]
+
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(320, 180)
 texture = ExtResource("1_qe4ae")
@@ -43,19 +49,15 @@ offset_right = 640.0
 
 [node name="ScoreCounter" parent="." instance=ExtResource("4_whcrg")]
 
-[node name="EnemyManager" parent="." instance=ExtResource("1_087od")]
-
-[node name="FoodManager" parent="." instance=ExtResource("2_ljjo4")]
-
-[node name="ScoreBonusManager" parent="." instance=ExtResource("3_xeayt")]
-
 [node name="Player" parent="." instance=ExtResource("2_t7qp4")]
 position = Vector2(320, 336)
 
 [node name="TopPedestal" parent="." instance=ExtResource("1_ci7hf")]
+visible = false
 position = Vector2(320, 8)
 
 [node name="BtmPedestal" parent="." instance=ExtResource("2_1in7w")]
+visible = false
 position = Vector2(320, 352)
 
 [node name="Tutorial" parent="." instance=ExtResource("9_41b6p")]
