@@ -15,7 +15,6 @@ var collision_info: KinematicCollision2D
 
 
 func Enter():
-	print("State = MovingUp")
 	pass
 
 

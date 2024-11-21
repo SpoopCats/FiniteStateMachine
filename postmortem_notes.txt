@@ -4,8 +4,49 @@ Watch for impatience:
 	going and working really quickly. It's one of the most poorly understood
 	parts of my project now because of this.
 	
+Game organization is huge and the more you can learn about structuring large
+scale projects the better. This game works well and is organized okay for a
+beginner. It's relatively modular. But it's beginning to have a few things slip
+in there that are hardcoded or not as flexible as they could be. This is also
+likely related to impatience. 
+	
+I lack some of the skills I need still with the physics engine, player movement,
+basics etc. also skills for polishing games. Tweens are fine, but the animation
+player/creator, particle effects, etc. I am not so familiar with 
+
+The lack of animations and juiciness is this games biggest issue at the moment.
+Menus could stand to be redone.
+
+Lack of settings is an issue. Specifically the screen resolution being tied to
+1080p exclusively.
+	
 Menus are a mess
 
 I don't understand custom resources
 
 I don't understand Themes
+
+Polish is so important and helps a game shine. 
+
+You can do so much with gray boxing a game and if you stay in that phase for a
+long time it's not necessarily a bad thing. Placeholder art is always a good
+option too.
+
+Deadlines are useful, but they aren't necessarily fun. I got a lot done and I
+pushed myself to do more probably because of the deadlines, but it didn't 
+enhance my enjoyment of the process.
+
+Game design documents are important and mine was helpful in keeping me on track.
+Simple tracking tools were also useful and important to the process (only used
+a GDD, Trello, and Git for version control/issue logging).
+
+It's impossible to really know when a game is done. Art is never finished, just
+merely abandonned is a good quote.
+
+You can accomplish a lot in 1 hr a day, but it will limit your scope
+significantly if you want to regularly release anything substantive.
+
+In the end I am having trouble being proud of the finished result even though it
+is just my first game and I should be proud that I even made it this far! I am
+not feeling that yet though. I think it's just a difficult time to focus on
+things like this.

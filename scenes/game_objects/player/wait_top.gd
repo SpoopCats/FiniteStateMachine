@@ -8,8 +8,6 @@ func Enter():
 	# emit signal to instantiate food on btm pedestal
 	top_sfx.play()
 	GameEvents.emit_spawn_food_btm()
-	print("State = WaitTop")
-	pass
 
 
 func Update(delta: float):
