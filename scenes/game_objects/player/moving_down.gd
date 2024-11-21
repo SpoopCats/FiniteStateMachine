@@ -19,7 +19,6 @@ var cat_collision_count:= 0
 func Enter():
 	# connect the game_over signal
 	GameEvents.player_hits_enemy_game_over.connect(_on_player_hits_enemy_game_over)
-	print("MovingDown")
 
 
 func Update(delta: float):

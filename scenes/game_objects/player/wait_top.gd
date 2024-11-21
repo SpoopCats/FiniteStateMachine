@@ -5,9 +5,8 @@ class_name WaitTop
 
 
 func Enter():
-	# emit signal to instantiate food on btm pedestal
-	print("WaitTop")
 	top_sfx.play()
+	# emit signal to instantiate food on btm pedestal
 	GameEvents.emit_spawn_food_btm()
 
 
