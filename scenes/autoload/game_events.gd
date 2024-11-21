@@ -11,6 +11,8 @@ signal spawn_food_btm
 # Signal for game over when time runs out
 signal time_expired_game_over
 # Signal for game over when player hits an enemy
+# Linked to the game over animation across many scenes
+	# player FSM moving_up.gd and moving_down.gd
 signal player_hits_enemy_game_over
 
 # Emits the custom signal for incrementing the score
