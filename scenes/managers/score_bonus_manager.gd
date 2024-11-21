@@ -10,6 +10,9 @@ extends Node
 # reference to in-game timer
 @onready var game_timer: Timer = $"../GameTimer/MarginContainer/Timer"
 
+# tells the spawner if it should be running
+var spawner_on: bool = true
+
 # possible lanes to spawn in, currently the same as enemy spawn points
 # this should maybe be a resource since enemy_manager uses it too
 var spawn_points = [
@@ -35,6 +38,7 @@ var spawn_points = [
 
 
 func _ready() -> void:
+	GameEvents.player_hits_enemy_game_over.connect(_on_player_hits_enemy_game_over)
 	bonus_timer.timeout.connect(roll_for_bonus_spawn)
 
 
@@ -43,20 +47,21 @@ func _process(delta: float) -> void:
 
 
 func roll_for_bonus_spawn():
-	# roll D100
-	var roll = randi_range(1, 100)
-	# no spawn, exit code
-	if roll < spawn_roll_challenge:
-		return
-	# roll succeeds, spawn in score_bonus.tscn
-	if roll >= spawn_roll_challenge: #modify here for changing spawn chances
-		var bonus = score_bonus_scene.instantiate()
-		var bonus_lane = spawn_points.pick_random()
-		bonus.position = bonus_lane
-		# check if it should be moving left instead of right
-		if bonus.position.x > 640:
-			bonus.dir = Vector2.LEFT
-		game.add_child(bonus)
+	if spawner_on == true:
+		# roll D100
+		var roll = randi_range(1, 100)
+		# no spawn, exit code
+		if roll < spawn_roll_challenge:
+			return
+		# roll succeeds, spawn in score_bonus.tscn
+		if roll >= spawn_roll_challenge: #modify here for changing spawn chances
+			var bonus = score_bonus_scene.instantiate()
+			var bonus_lane = spawn_points.pick_random()
+			bonus.position = bonus_lane
+			# check if it should be moving left instead of right
+			if bonus.position.x > 640:
+				bonus.dir = Vector2.LEFT
+			game.add_child(bonus)
 
 # increases the spawn rate of bonuses as game time progresses
 func _increase_bonus_spawn_rate():
@@ -64,3 +69,7 @@ func _increase_bonus_spawn_rate():
 		spawn_roll_challenge = 65
 	if game_timer.time_left < 30:
 		spawn_roll_challenge = 45
+		
+
+func _on_player_hits_enemy_game_over():
+	spawner_on = false

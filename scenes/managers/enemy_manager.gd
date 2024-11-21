@@ -11,6 +11,8 @@ extends Node
 @onready var game_timer: Timer = $"../GameTimer/MarginContainer/Timer"
 
 
+# says if the spawner should be working
+var spawner_on: bool = true
 # range for spawn timer to increase difficulty as the game goes on
 var lower_bound_sec: float = 0.75
 var upper_bound_sec: float = 1.5
@@ -42,6 +44,8 @@ var spawn_points = [
 
 func _ready() -> void:
 	GameEvents.off_screen.connect(_on_off_screen)
+	# connect to signal to turn off the spawner for game over animations
+	GameEvents.player_hits_enemy_game_over.connect(_on_player_hits_enemy_game_over)
 	spawn_timer.timeout.connect(_on_spawn_timer_timeout)
 
 
@@ -62,18 +66,19 @@ func _pick_and_close_lane(spawns: Array):
 
 # here is where all the code for enemy instantiation happens
 func _on_spawn_timer_timeout():
-	# set the timer to a new value to vary enemy spawn rate
-	randomize_timer(lower_bound_sec, upper_bound_sec)
-	var enemy = enemy_scene.instantiate()
-	# is closing the lane necessary right now? maybe if powerups get added to the game?
-	var enemy_lane = _pick_and_close_lane(spawn_points)
-	enemy.position = enemy_lane
-	# randomize enemy speed a bit
-	enemy.speed = randi_range(80,120)
-	# make enemies spawning on right side of screen go left
-	if enemy.position.x > 640:
-		enemy.dir = Vector2.LEFT
-	game.add_child(enemy)
+	if spawner_on == true:
+		# set the timer to a new value to vary enemy spawn rate
+		randomize_timer(lower_bound_sec, upper_bound_sec)
+		var enemy = enemy_scene.instantiate()
+		# is closing the lane necessary right now? maybe if powerups get added to the game?
+		var enemy_lane = _pick_and_close_lane(spawn_points)
+		enemy.position = enemy_lane
+		# randomize enemy speed a bit
+		enemy.speed = randi_range(80,120)
+		# make enemies spawning on right side of screen go left
+		if enemy.position.x > 640:
+			enemy.dir = Vector2.LEFT
+		game.add_child(enemy)
 	
 # randomize spawn timer a bit so it's not just 1 second
 func randomize_timer(lower: float, upper: float):
@@ -90,3 +95,7 @@ func _increase_difficulty():
 	if game_timer.time_left < 30:
 		upper_bound_sec = 1
 		lower_bound_sec = 0.35
+
+
+func _on_player_hits_enemy_game_over():
+	spawner_on = false
