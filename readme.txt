@@ -96,3 +96,19 @@ the score_bonus_manager.gd and enemy_manager.gd scripts. Edit these two funcs
 to modify the difficulty:
 	func _increase_difficulty():
 	func _increase_bonus_spawn_rate():
+
+PLAYER_HIT_ENEMY_GAME_OVER SIGNAL
+	This signal is emitted from the player FSM from MovingDown and MovingUp
+	It is connected to many scripts:
+		# player root node CharacterBody2D
+			# player FSM moving_up.gd and moving_down.gd
+		# enemy_manager.gd
+		# score_bonus_manager.gd
+		# enemy.gd = all the enemies on screen
+		# score_bonus.gd = all the peanut butter on screen
+
+this signal helps to manage the game over animation that plays when PB Ralph
+player object hits a cat in the game. There is a function in each of these
+scripts called _on_player_hit_enemy_game_over that controls what that particular
+instance of a scene or manager is supposed to do when a game over signal is
+detected.

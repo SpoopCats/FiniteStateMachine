@@ -9,6 +9,7 @@ var lane_to_reopen:= Vector2(69, 69)
 
 
 func _ready() -> void:
+	GameEvents.player_hits_enemy_game_over.connect(_on_player_hits_enemy_game_over)
 	velocity = dir * speed
 
 
@@ -27,3 +28,8 @@ func _is_bonus_on_screen():
 	if position.x > 656 or position.x < -16:
 		GameEvents.emit_off_screen(lane_to_reopen)
 		queue_free()
+
+
+func _on_player_hits_enemy_game_over():
+	print('peanut butter knows game is over.')
+	queue_free()

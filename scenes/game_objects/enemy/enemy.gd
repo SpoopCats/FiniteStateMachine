@@ -11,6 +11,7 @@ extends CharacterBody2D
 
 
 func _ready() -> void:
+	GameEvents.player_hits_enemy_game_over.connect(_on_player_hits_enemy_game_over)
 	sprite_2d.texture = cat_texture.pick_random()
 	velocity = dir * speed
 	# if travelling to the left
@@ -34,4 +35,8 @@ func _is_enemy_on_screen():
 	if position.x > 656 or position.x < -16:
 		GameEvents.emit_off_screen(lane_to_reopen)
 		queue_free()
-		
+
+
+func _on_player_hits_enemy_game_over():
+	print("Enemy knows game is over.")
+	queue_free()
