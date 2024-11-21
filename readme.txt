@@ -106,6 +106,7 @@ PLAYER_HIT_ENEMY_GAME_OVER SIGNAL
 		# score_bonus_manager.gd
 		# enemy.gd = all the enemies on screen
 		# score_bonus.gd = all the peanut butter on screen
+		# game_timer.gd
 
 this signal helps to manage the game over animation that plays when PB Ralph
 player object hits a cat in the game. There is a function in each of these
