@@ -7,6 +7,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	GameEvents.player_hits_enemy_game_over.connect(_on_player_hits_enemy_game_over)
 	timer.timeout.connect(_on_timer_timeout)
 
 
@@ -44,3 +45,6 @@ func time_running_out(time_left):
 	if time_left <= 10:
 		# this red isn't currently in the color palette
 		timer_label.add_theme_color_override("font_color", Color.TOMATO)
+
+func _on_player_hits_enemy_game_over():
+	timer.paused = true

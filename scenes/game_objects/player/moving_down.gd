@@ -54,7 +54,7 @@ func Physics_Update(delta: float):
 				# if score is higher than high score, save the high score
 				if ScoreManager.current_score > ScoreManager.high_score:
 					ScoreManager.save_score()
-				get_tree().change_scene_to_file('res://scenes/UI/game_over_menu/game_over_menu.tscn')
+				#get_tree().change_scene_to_file('res://scenes/UI/game_over_menu/game_over_menu.tscn')
 
 
 func _on_player_hits_enemy_game_over():
