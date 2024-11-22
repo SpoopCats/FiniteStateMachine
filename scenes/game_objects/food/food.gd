@@ -18,6 +18,7 @@ var final_btm_food_pos = Vector2(320, 352)
 
 
 func _ready() -> void:
+	GameEvents.player_hits_enemy_game_over.connect(_on_player_hits_enemy_game_over)
 	scale = Vector2(0.5, 0.5)
 	# move to infront of the background, but behind garbage can / bag
 	get_parent().move_child(food, 4)
@@ -41,3 +42,12 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	pass
+
+
+func _on_player_hits_enemy_game_over():
+	var tween = create_tween()
+	tween.set_parallel(true)
+	tween.tween_property($".", 'scale', Vector2(0, 0), 0.35)
+	tween.tween_property($".", 'rotation', 6.283185, 0.25)
+	await  tween.finished
+	queue_free()
