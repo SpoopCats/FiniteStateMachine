@@ -31,5 +31,9 @@ func _is_bonus_on_screen():
 
 
 func _on_player_hits_enemy_game_over():
-	print('peanut butter knows game is over.')
+	var tween = create_tween()
+	tween.set_parallel(true)
+	tween.tween_property($".", 'scale', Vector2(0, 0), 0.35)
+	tween.tween_property($".", 'rotation', 6.283185, 0.25)
+	await  tween.finished
 	queue_free()
