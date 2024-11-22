@@ -18,4 +18,7 @@ func _process(delta: float) -> void:
 
 
 func _on_timer_timeout() -> void:
+	var tween = create_tween()
+	tween.tween_property($VBoxContainer, 'scale', Vector2(0,0), 0.25)
+	await tween.finished
 	queue_free()
