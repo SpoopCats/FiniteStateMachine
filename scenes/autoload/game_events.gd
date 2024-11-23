@@ -8,12 +8,9 @@ signal off_screen()
 # Signals for spawning food on the pedestal Ralph is not on
 signal spawn_food_top
 signal spawn_food_btm
-# Signal for game over when time runs out
-signal time_expired_game_over
-# Signal for game over when player hits an enemy
+# Signals for game over when player hits an enemy / time expires
 # Linked to the game over animation across many scenes
-	# player root node CharacterBody2D
-		# player FSM moving_up.gd and moving_down.gd
+	# player FSM moving_up.gd and moving_down.gd
 	# enemy_manager.gd
 	# score_bonus_manager.gd
 	# enemy.gd = all the enemies on screen
@@ -21,6 +18,7 @@ signal time_expired_game_over
 	# game_timer.gd
 	# food.gd
 signal player_hits_enemy_game_over
+signal time_expired_game_over
 
 # Emits the custom signal for incrementing the score
 func emit_increase_score(score_amt: int):

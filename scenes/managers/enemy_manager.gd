@@ -46,6 +46,7 @@ func _ready() -> void:
 	GameEvents.off_screen.connect(_on_off_screen)
 	# connect to signal to turn off the spawner for game over animations
 	GameEvents.player_hits_enemy_game_over.connect(_on_player_hits_enemy_game_over)
+	GameEvents.time_expired_game_over.connect(_on_time_expired_game_over)
 	spawn_timer.timeout.connect(_on_spawn_timer_timeout)
 
 
@@ -98,4 +99,8 @@ func _increase_difficulty():
 
 
 func _on_player_hits_enemy_game_over():
+	spawner_on = false
+
+
+func _on_time_expired_game_over():
 	spawner_on = false

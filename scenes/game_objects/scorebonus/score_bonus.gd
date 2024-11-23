@@ -9,6 +9,7 @@ var lane_to_reopen:= Vector2(69, 69)
 
 
 func _ready() -> void:
+	GameEvents.time_expired_game_over.connect(_on_time_expired_game_over)
 	GameEvents.player_hits_enemy_game_over.connect(_on_player_hits_enemy_game_over)
 	velocity = dir * speed
 
@@ -31,6 +32,14 @@ func _is_bonus_on_screen():
 
 
 func _on_player_hits_enemy_game_over():
+	game_over_tween()
+
+
+func _on_time_expired_game_over():
+	game_over_tween()
+
+
+func game_over_tween():
 	var tween = create_tween()
 	tween.set_parallel(true)
 	tween.tween_property($".", 'scale', Vector2(0, 0), 0.35)

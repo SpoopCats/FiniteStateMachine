@@ -6,7 +6,7 @@ extends Node
 # timer for rolling if a new bonus will spawn
 @onready var bonus_timer: Timer = $BonusTimer
 # threshold that roll must equal or beat e.g., 85 = roll an 8 or higher
-@export var spawn_roll_challenge: int = 85
+@export var spawn_roll_challenge: int = 1
 # reference to in-game timer
 @onready var game_timer: Timer = $"../GameTimer/MarginContainer/Timer"
 
@@ -39,6 +39,7 @@ var spawn_points = [
 
 func _ready() -> void:
 	GameEvents.player_hits_enemy_game_over.connect(_on_player_hits_enemy_game_over)
+	GameEvents.time_expired_game_over.connect(_on_time_expired_game_over)
 	bonus_timer.timeout.connect(roll_for_bonus_spawn)
 
 
@@ -72,4 +73,8 @@ func _increase_bonus_spawn_rate():
 		
 
 func _on_player_hits_enemy_game_over():
+	spawner_on = false
+
+
+func _on_time_expired_game_over():
 	spawner_on = false

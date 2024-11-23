@@ -11,6 +11,7 @@ extends CharacterBody2D
 
 
 func _ready() -> void:
+	GameEvents.time_expired_game_over.connect(_on_time_expired_game_over)
 	GameEvents.player_hits_enemy_game_over.connect(_on_player_hits_enemy_game_over)
 	sprite_2d.texture = cat_texture.pick_random()
 	velocity = dir * speed
@@ -38,6 +39,12 @@ func _is_enemy_on_screen():
 
 
 func _on_player_hits_enemy_game_over():
+	game_over_tween()
+
+func _on_time_expired_game_over():
+	game_over_tween()
+
+func game_over_tween():
 	var tween = create_tween()
 	tween.set_parallel(true)
 	tween.tween_property($".", 'scale', Vector2(0, 0), 0.35)
