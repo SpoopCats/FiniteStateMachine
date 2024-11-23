@@ -7,6 +7,7 @@ class_name MovingDown
 @onready var player: CharacterBody2D = $"../.."
 @export var pts_label_scene: PackedScene
 @export var game_over_msg_scene: PackedScene
+@export var times_over_msg_scene: PackedScene
 
 
 var dir: Vector2 = Vector2.DOWN
@@ -20,6 +21,7 @@ var cat_collision_count:= 0
 func Enter():
 	# connect the game_over signal
 	GameEvents.player_hits_enemy_game_over.connect(_on_player_hits_enemy_game_over)
+	GameEvents.time_expired_game_over.connect(_on_time_expired_game_over)
 
 
 func Update(delta: float):
@@ -58,10 +60,14 @@ func Physics_Update(delta: float):
 
 
 func _on_player_hits_enemy_game_over():
-	game_over_tween()
+	player_hit_enemy_game_over_tween()
 
 
-func game_over_tween():
+func _on_time_expired_game_over():
+	times_up_game_over_tween()
+
+
+func player_hit_enemy_game_over_tween():
 	# stop player from moving
 	player_velocity = Vector2.ZERO
 	# tween player object
@@ -76,6 +82,24 @@ func game_over_tween():
 	game_over_msg_instance.position = Vector2(640 / 2, 360 / 2)
 	# really sloppy way of referencing the main game scene!
 	get_parent().get_parent().get_parent().add_child(game_over_msg_instance)
+	scene_change_timer.start()
+
+
+func times_up_game_over_tween():
+	# stop player from moving
+	player_velocity = Vector2.ZERO
+	# tween player object
+	var tween = create_tween()
+	tween.set_parallel(true)
+	tween.tween_property(player, 'scale', Vector2(0, 0), 0.35)
+	tween.tween_property(player, 'rotation', 6.283185, 0.25)
+	await  tween.finished
+	player.hide()
+	# instantiate game over msg
+	var times_up_msg_instance = times_over_msg_scene.instantiate()
+	times_up_msg_instance.position = Vector2(640 / 2, 360 / 2)
+	# really sloppy way of referencing the main game scene!
+	get_parent().get_parent().get_parent().add_child(times_up_msg_instance)
 	scene_change_timer.start()
 
 

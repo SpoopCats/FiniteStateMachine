@@ -41,6 +41,7 @@ times_up_msg_instance = ExtResource("4_hjsva")
 script = ExtResource("4_s5y56")
 pts_label_scene = ExtResource("5_ilyd0")
 game_over_msg_scene = ExtResource("6_0kydd")
+times_over_msg_scene = ExtResource("4_hjsva")
 
 [node name="WaitTop" type="Node" parent="StateMachine"]
 script = ExtResource("5_bosfj")
@@ -50,6 +51,7 @@ times_up_msg_instance = ExtResource("4_hjsva")
 script = ExtResource("6_att2s")
 pts_label_scene = ExtResource("5_ilyd0")
 game_over_msg_scene = ExtResource("6_0kydd")
+times_over_msg_scene = ExtResource("4_hjsva")
 
 [node name="TopSfx" parent="." instance=ExtResource("8_rsc6e")]
 
