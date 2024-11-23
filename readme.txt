@@ -100,8 +100,7 @@ to modify the difficulty:
 PLAYER_HIT_ENEMY_GAME_OVER SIGNAL
 	This signal is emitted from the player FSM from MovingDown and MovingUp
 	It is connected to many scripts:
-		# player root node CharacterBody2D
-			# player FSM moving_up.gd and moving_down.gd
+		# player FSM moving_up.gd and moving_down.gd
 		# enemy_manager.gd
 		# score_bonus_manager.gd
 		# enemy.gd = all the enemies on screen
@@ -109,8 +108,21 @@ PLAYER_HIT_ENEMY_GAME_OVER SIGNAL
 		# game_timer.gd
 		# food.gd
 
-this signal helps to manage the game over animation that plays when PB Ralph
-player object hits a cat in the game. There is a function in each of these
-scripts called _on_player_hit_enemy_game_over that controls what that particular
-instance of a scene or manager is supposed to do when a game over signal is
-detected.
+TIME_EXPIRED_GAME_OVER SIGNAL
+	Emitted from game_timer.tscn when the timer runs out
+	It is connected to many scripts:
+		# player FSM all 4x states (wait top, wait btm, moving up, moving down)
+		# enemy_manager.gd
+		# score_bonus_manager.gd
+		# enemy.gd = all the enemies on screen
+		# score_bonus.gd = all the peanut butter on screen
+		# game_timer.gd
+		# food.gd
+
+this signal helps to manage the game over animation that plays when the game
+ends by hitting an enemy or by the timer expiring. There are tween functions
+that get called in these states.
+
+OTHER WEIRD SHIT
+	The player has a scene change timer that changes the scene on game over
+	It's odd and really shouldn't be attached to the player but it is.
