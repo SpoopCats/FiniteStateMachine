@@ -18,6 +18,7 @@ var final_btm_food_pos = Vector2(320, 352)
 
 
 func _ready() -> void:
+	# connect to game over signal for when player hits an enemy
 	GameEvents.player_hits_enemy_game_over.connect(_on_player_hits_enemy_game_over)
 	scale = Vector2(0.5, 0.5)
 	# move to infront of the background, but behind garbage can / bag

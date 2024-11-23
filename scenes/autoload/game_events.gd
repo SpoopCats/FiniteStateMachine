@@ -19,6 +19,7 @@ signal time_expired_game_over
 	# enemy.gd = all the enemies on screen
 	# score_bonus.gd = all the peanut butter on screen
 	# game_timer.gd
+	# food.gd
 signal player_hits_enemy_game_over
 
 # Emits the custom signal for incrementing the score
