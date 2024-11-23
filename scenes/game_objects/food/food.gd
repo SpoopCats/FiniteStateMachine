@@ -18,8 +18,9 @@ var final_btm_food_pos = Vector2(320, 352)
 
 
 func _ready() -> void:
-	# connect to game over signal for when player hits an enemy
+	# connect to game over signal for when player hits an enemy / time expires
 	GameEvents.player_hits_enemy_game_over.connect(_on_player_hits_enemy_game_over)
+	GameEvents.time_expired_game_over.connect(_on_time_expired_game_over)
 	scale = Vector2(0.5, 0.5)
 	# move to infront of the background, but behind garbage can / bag
 	get_parent().move_child(food, 4)
@@ -46,6 +47,14 @@ func _process(delta: float) -> void:
 
 
 func _on_player_hits_enemy_game_over():
+	game_over_tween()
+
+
+func _on_time_expired_game_over():
+	game_over_tween()
+
+
+func game_over_tween():
 	var tween = create_tween()
 	tween.set_parallel(true)
 	tween.tween_property($".", 'scale', Vector2(0, 0), 0.35)
