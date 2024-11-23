@@ -10,7 +10,6 @@ signal spawn_food_top
 signal spawn_food_btm
 # Signals for game over when player hits an enemy / time expires
 # Linked to the game over animation across many scenes
-	# player root node
 	# player FSM moving_up.gd and moving_down.gd
 	# enemy_manager.gd
 	# score_bonus_manager.gd

@@ -58,6 +58,10 @@ func Physics_Update(delta: float):
 
 
 func _on_player_hits_enemy_game_over():
+	game_over_tween()
+
+
+func game_over_tween():
 	# stop player from moving
 	player_velocity = Vector2.ZERO
 	# tween player object
@@ -73,7 +77,6 @@ func _on_player_hits_enemy_game_over():
 	# really sloppy way of referencing the main game scene!
 	get_parent().get_parent().get_parent().add_child(game_over_msg_instance)
 	scene_change_timer.start()
-
 
 
 func Exit():

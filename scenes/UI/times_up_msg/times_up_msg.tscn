@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://dq3aiut5ie5ve"]
+
+[ext_resource type="Script" path="res://scenes/UI/game_over_msg/game_over_msg.gd" id="1_pkfuv"]
+[ext_resource type="FontFile" uid="uid://420mvaqtu2k0" path="res://assets/fonts/pixel_font.ttf" id="2_j8swd"]
+
+[node name="TimesUpMsg" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pkfuv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -8.0
+offset_right = 80.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(80, 8)
+metadata/_edit_group_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="TimesUpLabel" type="Label" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.690196, 0.921569, 0.576471, 1)
+theme_override_fonts/font = ExtResource("2_j8swd")
+text = "TIME'S UP!"
+horizontal_alignment = 1

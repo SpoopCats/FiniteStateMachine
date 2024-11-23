@@ -58,6 +58,10 @@ func Physics_Update(delta: float):
 
 
 func _on_player_hits_enemy_game_over():
+	game_over_tween()
+
+
+func game_over_tween():
 	# stop player from moving
 	player_velocity = Vector2.ZERO
 	# tween player object

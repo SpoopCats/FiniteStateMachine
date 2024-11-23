@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://cy5udr3a1n467"]
+[gd_scene load_steps=15 format=3 uid="uid://cy5udr3a1n467"]
 
 [ext_resource type="Script" path="res://scenes/game_objects/player/player.gd" id="1_pdcg6"]
 [ext_resource type="Script" path="res://scenes/game_objects/player/state_machine.gd" id="2_alk6w"]
 [ext_resource type="Script" path="res://scenes/game_objects/player/wait_btm.gd" id="3_87pjr"]
+[ext_resource type="PackedScene" uid="uid://dq3aiut5ie5ve" path="res://scenes/UI/times_up_msg/times_up_msg.tscn" id="4_hjsva"]
 [ext_resource type="Script" path="res://scenes/game_objects/player/moving_up.gd" id="4_s5y56"]
 [ext_resource type="Script" path="res://scenes/game_objects/player/wait_top.gd" id="5_bosfj"]
 [ext_resource type="PackedScene" uid="uid://bjxoxbfkj0tsn" path="res://scenes/UI/+5_label/+pts_label.tscn" id="5_ilyd0"]
@@ -34,6 +35,7 @@ initial_state = NodePath("WaitBtm")
 
 [node name="WaitBtm" type="Node" parent="StateMachine"]
 script = ExtResource("3_87pjr")
+times_up_msg_instance = ExtResource("4_hjsva")
 
 [node name="MovingUp" type="Node" parent="StateMachine"]
 script = ExtResource("4_s5y56")
