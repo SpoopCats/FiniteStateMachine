@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bxe0xsbvpilv0"]
+[gd_scene load_steps=14 format=3 uid="uid://bxe0xsbvpilv0"]
 
 [ext_resource type="PackedScene" uid="uid://ddy0w3bgh537x" path="res://scenes/managers/enemy_manager.tscn" id="1_087od"]
 [ext_resource type="PackedScene" uid="uid://dlebo6pg020d3" path="res://scenes/game_objects/pedestals/top_pedestal.tscn" id="1_ci7hf"]
@@ -13,7 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://b53ft8643ldn" path="res://scenes/managers/score_bonus_manager.tscn" id="3_xeayt"]
 [ext_resource type="PackedScene" uid="uid://cyfii8hf534ly" path="res://scenes/UI/score_display/score_counter.tscn" id="4_whcrg"]
 [ext_resource type="PackedScene" uid="uid://b0xtal1jidwju" path="res://scenes/UI/tutorial/tutorial.tscn" id="9_41b6p"]
-[ext_resource type="PackedScene" uid="uid://cxk204a6u4fnc" path="res://scenes/UI/game_over_msg/game_over_msg.tscn" id="14_rw2ek"]
 
 [node name="Main" type="Node2D" groups=["game"]]
 
@@ -62,9 +61,3 @@ visible = false
 position = Vector2(320, 352)
 
 [node name="Tutorial" parent="." instance=ExtResource("9_41b6p")]
-
-[node name="GameOverMsg" parent="." instance=ExtResource("14_rw2ek")]
-offset_left = 320.0
-offset_top = 180.0
-offset_right = 320.0
-offset_bottom = 180.0

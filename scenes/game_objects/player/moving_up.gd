@@ -3,9 +3,10 @@ extends State
 
 class_name MovingUp
 
-
+@onready var scene_change_timer: Timer = $"../../SceneChangeTimer"
 @onready var player: CharacterBody2D = $"../.."
 @export var pts_label_scene: PackedScene
+@export var game_over_msg_scene: PackedScene
 
 
 var dir: Vector2 = Vector2.UP
@@ -53,15 +54,28 @@ func Physics_Update(delta: float):
 				# if score is higher than high score, save the high score
 				if ScoreManager.current_score > ScoreManager.high_score:
 					ScoreManager.save_score()
-				#get_tree().change_scene_to_file('res://scenes/UI/game_over_menu/game_over_menu.tscn')
+
 
 
 func _on_player_hits_enemy_game_over():
-	print("Player knows game is over.")
+	# stop player from moving
+	player_velocity = Vector2.ZERO
+	# tween player object
+	var tween = create_tween()
+	tween.set_parallel(true)
+	tween.tween_property(player, 'scale', Vector2(0, 0), 0.35)
+	tween.tween_property(player, 'rotation', 6.283185, 0.25)
+	await  tween.finished
+	player.hide()
+	# instantiate game over msg
+	var game_over_msg_instance = game_over_msg_scene.instantiate()
+	game_over_msg_instance.position = Vector2(640 / 2, 360 / 2)
+	# really sloppy way of referencing the main game scene!
+	get_parent().get_parent().get_parent().add_child(game_over_msg_instance)
+	scene_change_timer.start()
 
 
 func Exit():
 	# disconnects the player hits enemy game over
 	GameEvents.player_hits_enemy_game_over.disconnect(_on_player_hits_enemy_game_over)
 	GameEvents.emit_increase_score(player.score_for_eating)
-	pass

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cy5udr3a1n467"]
+[gd_scene load_steps=12 format=3 uid="uid://cy5udr3a1n467"]
 
 [ext_resource type="Script" path="res://scenes/game_objects/player/player.gd" id="1_pdcg6"]
 [ext_resource type="Script" path="res://scenes/game_objects/player/state_machine.gd" id="2_alk6w"]
@@ -6,11 +6,9 @@
 [ext_resource type="Script" path="res://scenes/game_objects/player/moving_up.gd" id="4_s5y56"]
 [ext_resource type="Script" path="res://scenes/game_objects/player/wait_top.gd" id="5_bosfj"]
 [ext_resource type="PackedScene" uid="uid://bjxoxbfkj0tsn" path="res://scenes/UI/+5_label/+pts_label.tscn" id="5_ilyd0"]
-[ext_resource type="PackedScene" uid="uid://cxk204a6u4fnc" path="res://scenes/UI/game_over_msg/game_over_msg.tscn" id="6_0kydd"]
 [ext_resource type="Script" path="res://scenes/game_objects/player/moving_down.gd" id="6_att2s"]
 [ext_resource type="PackedScene" uid="uid://c78kx521pu717" path="res://assets/sounds/sfx/top_sfx.tscn" id="8_rsc6e"]
 [ext_resource type="PackedScene" uid="uid://tg3qapghkufc" path="res://assets/sounds/sfx/btm_sfx.tscn" id="9_5ijds"]
-[ext_resource type="Script" path="res://scenes/game_objects/player/scene_change_timer.gd" id="11_nu0d7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qoavk"]
 radius = 8.0
@@ -38,7 +36,6 @@ script = ExtResource("3_87pjr")
 [node name="MovingUp" type="Node" parent="StateMachine"]
 script = ExtResource("4_s5y56")
 pts_label_scene = ExtResource("5_ilyd0")
-game_over_msg_scene = ExtResource("6_0kydd")
 
 [node name="WaitTop" type="Node" parent="StateMachine"]
 script = ExtResource("5_bosfj")
@@ -46,14 +43,7 @@ script = ExtResource("5_bosfj")
 [node name="MovingDown" type="Node" parent="StateMachine"]
 script = ExtResource("6_att2s")
 pts_label_scene = ExtResource("5_ilyd0")
-game_over_msg_scene = ExtResource("6_0kydd")
 
 [node name="TopSfx" parent="." instance=ExtResource("8_rsc6e")]
 
 [node name="BtmSfx" parent="." instance=ExtResource("9_5ijds")]
-
-[node name="SceneChangeTimer" type="Timer" parent="."]
-one_shot = true
-script = ExtResource("11_nu0d7")
-
-[connection signal="timeout" from="SceneChangeTimer" to="SceneChangeTimer" method="_on_timeout"]
