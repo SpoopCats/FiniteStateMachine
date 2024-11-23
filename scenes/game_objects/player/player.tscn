@@ -44,6 +44,7 @@ game_over_msg_scene = ExtResource("6_0kydd")
 
 [node name="WaitTop" type="Node" parent="StateMachine"]
 script = ExtResource("5_bosfj")
+times_up_msg_instance = ExtResource("4_hjsva")
 
 [node name="MovingDown" type="Node" parent="StateMachine"]
 script = ExtResource("6_att2s")

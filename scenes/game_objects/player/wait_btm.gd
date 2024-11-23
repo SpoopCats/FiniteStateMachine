@@ -46,5 +46,6 @@ func game_over_tween():
 	get_parent().get_parent().get_parent().add_child(times_up_msg_instance)
 	scene_change_timer.start()
 
+
 func Exit():
 	pass
