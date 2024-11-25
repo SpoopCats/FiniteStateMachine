@@ -105,4 +105,5 @@ func times_up_game_over_tween():
 func Exit():
 	# disconnects the player hits enemy game over
 	GameEvents.player_hits_enemy_game_over.disconnect(_on_player_hits_enemy_game_over)
+	GameEvents.time_expired_game_over.disconnect(_on_time_expired_game_over)
 	GameEvents.emit_increase_score(player.score_for_eating)

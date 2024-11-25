@@ -48,4 +48,4 @@ func game_over_tween():
 
 
 func Exit():
-	pass
+	GameEvents.time_expired_game_over.disconnect(_on_time_expired_game_over)
