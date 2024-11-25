@@ -77,7 +77,7 @@ allow_lesser = true
 [node name="MuteVolumeLabel" type="Label" parent="SettingsContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_1t7xw")
-text = "Mute Volume"
+text = "Mute SFX + Music"
 
 [node name="MuteCheckBox" type="CheckBox" parent="SettingsContainer/VBoxContainer"]
 layout_mode = 2
@@ -90,6 +90,13 @@ text = "Mute Music"
 [node name="MuteMusicCheckBox" type="CheckBox" parent="SettingsContainer/VBoxContainer"]
 layout_mode = 2
 
+[node name="DelHighScoreButton" type="Button" parent="SettingsContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_y2dp5")
+theme_override_colors/font_color = Color(1, 0.968627, 0.894118, 1)
+theme_override_constants/outline_size = 1
+text = "DELETE HIGH SCORES"
+
 [node name="BackButton" type="Button" parent="SettingsContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_y2dp5")
@@ -100,4 +107,5 @@ text = "BACK"
 [connection signal="value_changed" from="SettingsContainer/VBoxContainer/VolumeHSlider" to="." method="_on_h_slider_value_changed"]
 [connection signal="toggled" from="SettingsContainer/VBoxContainer/MuteCheckBox" to="." method="_on_mute_check_box_toggled"]
 [connection signal="toggled" from="SettingsContainer/VBoxContainer/MuteMusicCheckBox" to="." method="_on_mute_music_check_box_toggled"]
+[connection signal="pressed" from="SettingsContainer/VBoxContainer/DelHighScoreButton" to="." method="_on_del_high_score_button_pressed"]
 [connection signal="pressed" from="SettingsContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

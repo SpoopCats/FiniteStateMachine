@@ -1,0 +1,99 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3oux634vm3x5"]
+
+[ext_resource type="FontFile" uid="uid://420mvaqtu2k0" path="res://assets/fonts/pixel_font.ttf" id="1_es1v5"]
+[ext_resource type="Theme" uid="uid://d3mnn2vdpemvj" path="res://resources/main_theme.tres" id="2_p3qh0"]
+
+[node name="ConfirmDelete" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 360.0
+color = Color(0.156863, 0.156863, 0.180392, 0.74902)
+
+[node name="Edge" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -206.0
+offset_top = -64.0
+offset_right = 206.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(20, 20)
+color = Color(0.690196, 0.921569, 0.576471, 1)
+
+[node name="MsgBackground" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -58.0
+offset_right = 200.0
+offset_bottom = 58.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(200, 58)
+color = Color(0.423529, 0.337255, 0.443137, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -192.0
+offset_top = -53.5
+offset_right = 192.0
+offset_bottom = 53.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(192, 53)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("1_es1v5")
+text = "Are you sure you want to 
+delete your high scores?"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(70, 32)
+layout_mode = 2
+theme = ExtResource("2_p3qh0")
+text = "YES"
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(70, 32)
+layout_mode = 2
+theme = ExtResource("2_p3qh0")
+text = "NO"
