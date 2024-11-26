@@ -18,8 +18,6 @@ func _on_timer_timeout():
 	# save score if current_score is greater than high_score
 	if ScoreManager.current_score > ScoreManager.high_score:
 		ScoreManager.save_score()
-	# load game_over_menu, ending the game
-	#get_tree().change_scene_to_file('res://scenes/UI/game_over_menu/game_over_menu.tscn')
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

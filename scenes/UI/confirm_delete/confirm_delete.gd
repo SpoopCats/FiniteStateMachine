@@ -23,6 +23,11 @@ func _on_no_button_pressed() -> void:
 
 func _on_yes_button_pressed() -> void:
 	ScoreManager.current_score = 0
+	# record new high score of 0 to the file
 	ScoreManager.save_score()
+	# I believe load_score() also has to be called to make sure that the
+	# high_score variable in score_manager is up to date
+	ScoreManager.load_score()
+	GameOver.play()
 	GameEvents.emit_grab_focus()
 	queue_free()

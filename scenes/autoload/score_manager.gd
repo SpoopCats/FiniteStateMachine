@@ -28,3 +28,4 @@ func load_score():
 	if FileAccess.file_exists(SCORESAVEFILE):
 		high_score = file.get_32()
 		print("high score = " + str(high_score))
+	file = null
