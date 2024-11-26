@@ -20,6 +20,10 @@ signal spawn_food_btm
 signal player_hits_enemy_game_over
 signal time_expired_game_over
 
+# helps the setting menu grab focus again after the confirm delete scene
+# disappears
+signal grab_focus
+
 # Emits the custom signal for incrementing the score
 func emit_increase_score(score_amt: int):
 	increase_score.emit(score_amt)
@@ -43,3 +47,6 @@ func emit_time_expired_game_over():
 
 func emit_player_hits_enemy_game_over():
 	player_hits_enemy_game_over.emit()
+
+func emit_grab_focus():
+	grab_focus.emit()

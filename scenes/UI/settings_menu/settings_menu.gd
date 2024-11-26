@@ -1,8 +1,12 @@
 extends Control
 
+@export var confirm_del_scene: PackedScene
+@onready var back_button: Button = $SettingsContainer/VBoxContainer/MarginContainer2/BackButton
+
 
 func _ready() -> void:
-	$SettingsContainer/VBoxContainer/BackButton.grab_focus()
+	GameEvents.grab_focus.connect(_on_grab_focus)
+	back_button.grab_focus()
 
 
 func _on_h_slider_value_changed(value: float) -> void:
@@ -25,8 +29,9 @@ func _on_back_button_pressed() -> void:
 
 
 func _on_del_high_score_button_pressed() -> void:
-	pass
-	# want to instantiate a menu here to grab focus
-	# menu then runs the code below and closes itself on yes.
-	#ScoreManager.current_score = 0
-	#ScoreManager.save_score()
+	var confirm_del_scene_instance = confirm_del_scene.instantiate()
+	add_child(confirm_del_scene_instance)
+
+
+func _on_grab_focus():
+	back_button.grab_focus()

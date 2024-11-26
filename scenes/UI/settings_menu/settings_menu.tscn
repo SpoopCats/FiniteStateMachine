@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cmunhw0lkurlv"]
+[gd_scene load_steps=5 format=3 uid="uid://cmunhw0lkurlv"]
 
 [ext_resource type="Script" path="res://scenes/UI/settings_menu/settings_menu.gd" id="1_4wmhx"]
 [ext_resource type="FontFile" uid="uid://420mvaqtu2k0" path="res://assets/fonts/pixel_font.ttf" id="2_1t7xw"]
+[ext_resource type="PackedScene" uid="uid://d3oux634vm3x5" path="res://scenes/UI/confirm_delete/confirm_delete.tscn" id="2_be0eh"]
 [ext_resource type="Theme" uid="uid://d3mnn2vdpemvj" path="res://resources/main_theme.tres" id="2_y2dp5"]
 
 [node name="Control" type="Control"]
@@ -12,6 +13,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4wmhx")
+confirm_del_scene = ExtResource("2_be0eh")
 
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 0
@@ -51,10 +53,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -100.0
-offset_top = -100.5
-offset_right = 100.0
-offset_bottom = 100.5
+offset_left = -154.0
+offset_top = -109.0
+offset_right = 154.0
+offset_bottom = 135.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(100, 100)
@@ -64,6 +66,9 @@ layout_mode = 2
 
 [node name="VolumeLabel" type="Label" parent="SettingsContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.968627, 0.894118, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
 theme_override_fonts/font = ExtResource("2_1t7xw")
 text = "Volume"
 
@@ -76,6 +81,9 @@ allow_lesser = true
 
 [node name="MuteVolumeLabel" type="Label" parent="SettingsContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.968627, 0.894118, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
 theme_override_fonts/font = ExtResource("2_1t7xw")
 text = "Mute SFX + Music"
 
@@ -84,20 +92,33 @@ layout_mode = 2
 
 [node name="MuteMusicLabel" type="Label" parent="SettingsContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.968627, 0.894118, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
 theme_override_fonts/font = ExtResource("2_1t7xw")
 text = "Mute Music"
 
 [node name="MuteMusicCheckBox" type="CheckBox" parent="SettingsContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="DelHighScoreButton" type="Button" parent="SettingsContainer/VBoxContainer"]
+[node name="MarginContainer1" type="MarginContainer" parent="SettingsContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="DelHighScoreButton" type="Button" parent="SettingsContainer/VBoxContainer/MarginContainer1"]
 layout_mode = 2
 theme = ExtResource("2_y2dp5")
 theme_override_colors/font_color = Color(1, 0.968627, 0.894118, 1)
 theme_override_constants/outline_size = 1
 text = "DELETE HIGH SCORES"
 
-[node name="BackButton" type="Button" parent="SettingsContainer/VBoxContainer"]
+[node name="MarginContainer2" type="MarginContainer" parent="SettingsContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="BackButton" type="Button" parent="SettingsContainer/VBoxContainer/MarginContainer2"]
 layout_mode = 2
 theme = ExtResource("2_y2dp5")
 theme_override_colors/font_color = Color(1, 0.968627, 0.894118, 1)
@@ -107,5 +128,5 @@ text = "BACK"
 [connection signal="value_changed" from="SettingsContainer/VBoxContainer/VolumeHSlider" to="." method="_on_h_slider_value_changed"]
 [connection signal="toggled" from="SettingsContainer/VBoxContainer/MuteCheckBox" to="." method="_on_mute_check_box_toggled"]
 [connection signal="toggled" from="SettingsContainer/VBoxContainer/MuteMusicCheckBox" to="." method="_on_mute_music_check_box_toggled"]
-[connection signal="pressed" from="SettingsContainer/VBoxContainer/DelHighScoreButton" to="." method="_on_del_high_score_button_pressed"]
-[connection signal="pressed" from="SettingsContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="SettingsContainer/VBoxContainer/MarginContainer1/DelHighScoreButton" to="." method="_on_del_high_score_button_pressed"]
+[connection signal="pressed" from="SettingsContainer/VBoxContainer/MarginContainer2/BackButton" to="." method="_on_back_button_pressed"]

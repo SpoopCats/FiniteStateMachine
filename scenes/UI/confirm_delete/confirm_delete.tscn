@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://d3oux634vm3x5"]
+[gd_scene load_steps=4 format=3 uid="uid://d3oux634vm3x5"]
 
 [ext_resource type="FontFile" uid="uid://420mvaqtu2k0" path="res://assets/fonts/pixel_font.ttf" id="1_es1v5"]
+[ext_resource type="Script" path="res://scenes/UI/confirm_delete/confirm_delete.gd" id="1_w52bb"]
 [ext_resource type="Theme" uid="uid://d3mnn2vdpemvj" path="res://resources/main_theme.tres" id="2_p3qh0"]
 
 [node name="ConfirmDelete" type="Control"]
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_w52bb")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
@@ -17,7 +19,7 @@ offset_right = 640.0
 offset_bottom = 360.0
 color = Color(0.156863, 0.156863, 0.180392, 0.74902)
 
-[node name="Edge" type="ColorRect" parent="."]
+[node name="Edge" type="ColorRect" parent="ColorRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -33,7 +35,7 @@ grow_vertical = 2
 pivot_offset = Vector2(20, 20)
 color = Color(0.690196, 0.921569, 0.576471, 1)
 
-[node name="MsgBackground" type="ColorRect" parent="."]
+[node name="MsgBackground" type="ColorRect" parent="ColorRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -67,8 +69,9 @@ pivot_offset = Vector2(192, 53)
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="ConfirmationLabel" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.968627, 0.894118, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 1
 theme_override_fonts/font = ExtResource("1_es1v5")
@@ -76,24 +79,33 @@ text = "Are you sure you want to
 delete your high scores?"
 horizontal_alignment = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+[node name="ButtonMarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer"]
+[node name="ButtonHBox" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ButtonMarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+[node name="YesButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonMarginContainer/ButtonHBox"]
 custom_minimum_size = Vector2(70, 32)
 layout_mode = 2
+focus_neighbor_left = NodePath("../NoButton")
+focus_neighbor_right = NodePath("../NoButton")
 theme = ExtResource("2_p3qh0")
+theme_override_colors/font_color = Color(1, 0.968627, 0.894118, 1)
 text = "YES"
 
-[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+[node name="NoButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonMarginContainer/ButtonHBox"]
 custom_minimum_size = Vector2(70, 32)
 layout_mode = 2
+focus_neighbor_left = NodePath("../YesButton")
+focus_neighbor_right = NodePath("../YesButton")
 theme = ExtResource("2_p3qh0")
+theme_override_colors/font_color = Color(1, 0.968627, 0.894118, 1)
 text = "NO"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonMarginContainer/ButtonHBox/YesButton" to="." method="_on_yes_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonMarginContainer/ButtonHBox/NoButton" to="." method="_on_no_button_pressed"]
