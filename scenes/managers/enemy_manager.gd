@@ -91,11 +91,15 @@ func randomize_timer(lower: float, upper: float):
 # likely
 func _increase_difficulty():
 	if game_timer.time_left < 60:
+		upper_bound_sec = 1.3
+		lower_bound_sec = 0.6
+	if game_timer.time_left < 30:
 		upper_bound_sec = 1.15
 		lower_bound_sec = 0.5
-	if game_timer.time_left < 30:
-		upper_bound_sec = 1
-		lower_bound_sec = 0.35
+
+# old difficulties:
+#1.15 & .5
+#1 & 0.35
 
 
 func _on_player_hits_enemy_game_over():
