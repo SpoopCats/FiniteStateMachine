@@ -56,3 +56,9 @@ consequence though. Like I wouldn't have maybe made the player object that way
 if I knew more about game design when I started. However, this was absolutely
 worth doing, even though that threw off the organization for a few things and
 created some duplicate code.
+
+The GDD was made later on in the games development, shortly after I made the
+finite state machine. This hindered me a bit, but the GDD was still very useful.
+I would use one early where possible in the future. However, given my
+inexperience, I wasn't even sure if I could get the prototype working. The
+choice I made at the time made sense.
