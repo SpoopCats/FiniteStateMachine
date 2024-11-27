@@ -96,7 +96,7 @@ Rat Sprite from Kenney-Assets.itch.io
 TinyDungeon (modified)
 
 COLOR PALETTE
-Vanilla Milkshake by Space Sandwich via LowSpec.com"
+Vanilla Milkshake by Space Sandwich via LoSpec.com"
 horizontal_alignment = 1
 
 [connection signal="pressed" from="ButtonContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
