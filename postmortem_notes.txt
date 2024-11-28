@@ -12,7 +12,10 @@ likely related to impatience.
 	
 I lack some of the skills I need still with the physics engine, player movement,
 basics etc. also skills for polishing games. Tweens are fine, but the animation
-player/creator, particle effects, etc. I am not so familiar with 
+player/creator, particle effects, etc. I am not so familiar with.
+
+Also, polishing takes a very long time! I underestimated how much time that it
+would take to get the game to truly shine.
 
 The lack of animations and juiciness is this games biggest issue at the moment.
 Menus could stand to be redone.
@@ -62,3 +65,7 @@ finite state machine. This hindered me a bit, but the GDD was still very useful.
 I would use one early where possible in the future. However, given my
 inexperience, I wasn't even sure if I could get the prototype working. The
 choice I made at the time made sense.
+
+I had no tools available for editting video and it led to a rushed finish on
+getting a video together to just plain old share on Bluesky. Since I never
+planned to market this game I never ended up having any plan for this at all!
