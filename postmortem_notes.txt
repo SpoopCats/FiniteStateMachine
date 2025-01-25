@@ -54,7 +54,7 @@ is just my first game and I should be proud that I even made it this far! I am
 not feeling that yet though. I think it's just a difficult time to focus on
 things like this.
 
-The FSM and then pivoting into a game sort of fucked me up. It's a natural
+The FSM and then pivoting into a game sort of messed me up. It's a natural
 consequence though. Like I wouldn't have maybe made the player object that way
 if I knew more about game design when I started. However, this was absolutely
 worth doing, even though that threw off the organization for a few things and
