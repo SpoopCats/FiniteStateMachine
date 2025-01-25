@@ -123,6 +123,6 @@ this signal helps to manage the game over animation that plays when the game
 ends by hitting an enemy or by the timer expiring. There are tween functions
 that get called in these states.
 
-OTHER WEIRD SHIT
+OTHER WEIRD ASPECTS
 	The player has a scene change timer that changes the scene on game over
 	It's odd and really shouldn't be attached to the player but it is.
